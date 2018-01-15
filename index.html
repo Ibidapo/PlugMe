@@ -25,14 +25,14 @@
     </nav>
     <!-- Side Navigation Menu on Small Viewports -->
     <nav class="nav flex-column side-nav text-center d-md-none">
-        <a class="nav-link menu-tab" href="#">Trending</a>
-        <a class="nav-link menu-tab" href="#">Gallery</a>
-        <a class="nav-link menu-tab" href="#">Opportunities</a>
-        <a class="nav-link menu-tab" href="#">Blog</a>
-        <a class="nav-link menu-tab" href="#">About Us</a>
+        <a class="nav-link menu-tab" href="#trend">Trending</a>
+        <a class="nav-link menu-tab" href="#gallery">Gallery</a>
+        <a class="nav-link menu-tab" href="#opp">Opportunities</a>
+        <a class="nav-link menu-tab" href="#blog">Blog</a>
+        <a class="nav-link menu-tab" href="#about">About Us</a>
         <hr>
-        <a class="nav-link" href="#">Sign Up</a>
-        <a class="nav-link" href="logged_in.html">Sign In</a>
+        <a class="nav-link" href="sign_up.html">Sign Up</a>
+        <a class="nav-link" href="sign_in.html">Sign In</a>
     </nav>
     <!-- Advertisement Banner across all viewports -->
     <div class="container-fluid Ads">
@@ -137,7 +137,7 @@
             </div>
         </div>
         <!-- Collection of Plug Card and call-outs -->
-        <div class="container-fluid main-page tab-content" id="nav-tabContent">
+        <div class="tab-content" id="nav-tabContent">
             <div class="container tab-pane fade show active" id="trend" role="tabpanel" aria-labelledby="nav-trend">
                 <div class="row page-header">
                     <div class="col-12 mt-3">
@@ -250,30 +250,30 @@
                         <a href="#" class="btn plug-btn btn-yellow">More</a>
                     </div>
                 </div>
-                <div class="row plug-trends py-3">
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Opportunities</h4>
-                            <img src="images/opportunities.png"/>
-                        </a>
+                <div class="row plug-trends py-3 pb-5">
+                    <div class="col-10 col-sm-6 col-lg-3 mx-auto text-center">
+                        <figure class="figure py-3">
+                            <figcaption class="figure-caption"><h4>Opportunities</h4></figcaption>
+                            <img src="images/opportunities.png" class="figure-img mt-2" alt="">
+                        </figure>
                     </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Pluggers</h4>
-                            <img src="images/pluggers.png"/>
-                        </a>
+                    <div class="col-10 col-sm-6 col-lg-3 mx-auto text-center">
+                        <figure class="figure py-3">
+                            <figcaption class="figure-caption"><h4>Pluggers</h4></figcaption>
+                            <img src="images/pluggers.png" class="figure-img mt-2" alt="">
+                        </figure>
                     </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Achievers</h4>
-                            <img src="images/achievers.png"/>
-                        </a>
+                    <div class="col-10 col-sm-6 col-lg-3 mx-auto text-center">
+                        <figure class="figure py-3">
+                            <figcaption class="figure-caption"><h4>Achievers</h4></figcaption>
+                            <img src="images/achievers.png" class="figure-img mt-2" alt="">
+                        </figure>
                     </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Tags</h4>
-                            <img src="images/tags.png"/>
-                        </a>
+                    <div class="col-10 col-sm-6 col-lg-3 mx-auto text-center">
+                        <figure class="figure py-3">
+                            <figcaption class="figure-caption"><h4>Tags</h4></figcaption>
+                            <img src="images/tags.png" class="figure-img mt-2" alt="">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -657,263 +657,90 @@
             </div>
             <div class="container tab-pane fade" id="blog" role="tabpanel" aria-labelledby="nav-blog">
                 <div class="row page-header">
-                    <div class="col-12 mt-3">
+                    <div class="col-12 mt-3" style="height: 300px">
                         <h3 class="d-none d-md-block">Blog</h3>
                         <h4 class="d-block d-md-none text-center text-sm-left">Blog</h4>
-                    </div>
-                </div>
-                <div class="row page-content">
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-                            <div class="plug-caption px-3 py-1">
-                                <a href="#" class="plug-name">Max Payne</a>
-                                <div class="plug-details d-none">
-                                    <a href="#" class="plugger-name">John Doe</a><br>
-                                    <a href="#" class="plug-categories mt-1">#GraphicDesign #Animation #VideoProduction</a>
-                                </div>
-                                <hr>
-                                <span class="likes">Likes</span>
-                                <span class="views text-right">Views</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-                            <div class="plug-caption px-3 py-1">
-                                <a href="#" class="plug-name">Max Payne</a>
-                                <div class="plug-details d-none">
-                                    <a href="#" class="plugger-name">John Doe</a><br>
-                                    <a href="#" class="plug-categories mt-1">#GraphicDesign #Animation #VideoProduction</a>
-                                </div>
-                                <hr>
-                                <span class="likes">Likes</span>
-                                <span class="views text-right">Views</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="w-100 d-none d-lg-block"></div>
-                    <!-- 5 columns on Large screens -->
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="w-100 d-none d-lg-block"></div>
-                    <!-- 5 columns on Large screens -->
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="w-100 d-none d-lg-block"></div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center my-3">
-                        <a href="#" class="btn plug-btn btn-yellow">More</a>
-                    </div>
-                </div>
-                <div class="row plug-trends py-3">
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Opportunities</h4>
-                            <img src="images/opportunities.png"/>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Pluggers</h4>
-                            <img src="images/pluggers.png"/>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Achievers</h4>
-                            <img src="images/achievers.png"/>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Tags</h4>
-                            <img src="images/tags.png"/>
-                        </a>
+                        <p>This Page redirects to Medium, where all the blog content, archives are being housed.</p>
                     </div>
                 </div>
             </div>
             <div class="container tab-pane fade" id="about" role="tabpanel" aria-labelledby="nav-about">
-                <div class="row page-header">
-                    <div class="col-12 mt-3">
+                <div class="row">
+                    <div class="col-12 page-header text-center mt-5 mb-3">
                         <h3 class="d-none d-md-block">About Us</h3>
-                        <h4 class="d-block d-md-none text-center text-sm-left">About Us</h4>
+                        <h4 class="d-block d-md-none">About Us</h4>
+                        <span class="intro">We plug creative individuals to opportunities in their local</span>
+                        <span class="intro">environments and around the Globe.</span>
+                        <span class="caption">"Where Creatives meet Opportunity"</span>
                     </div>
-                </div>
-                <div class="row page-content">
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-                            <div class="plug-caption px-3 py-1">
-                                <a href="#" class="plug-name">Max Payne</a>
-                                <div class="plug-details d-none">
-                                    <a href="#" class="plugger-name">John Doe</a><br>
-                                    <a href="#" class="plug-categories mt-1">#GraphicDesign #Animation #VideoProduction</a>
-                                </div>
-                                <hr>
-                                <span class="likes">Likes</span>
-                                <span class="views text-right">Views</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-                            <div class="plug-caption px-3 py-1">
-                                <a href="#" class="plug-name">Max Payne</a>
-                                <div class="plug-details d-none">
-                                    <a href="#" class="plugger-name">John Doe</a><br>
-                                    <a href="#" class="plug-categories mt-1">#GraphicDesign #Animation #VideoProduction</a>
-                                </div>
-                                <hr>
-                                <span class="likes">Likes</span>
-                                <span class="views text-right">Views</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="w-100 d-none d-lg-block"></div>
-                    <!-- 5 columns on Large screens -->
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto"></div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="w-100 d-none d-lg-block"></div>
-                    <!-- 5 columns on Large screens -->
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-auto">
-                        <div class="plug-card mt-2 mb-3 mx-auto">
-
-                        </div>
-                    </div>
-                    <div class="w-100 d-none d-lg-block"></div>
                 </div>
                 <div class="row">
-                    <div class="col-12 text-center my-3">
-                        <a href="#" class="btn plug-btn btn-yellow">More</a>
+                    <div class="col-md-3 d-none d-md-flex">
+                        <div class="about-sign-up pl-3">
+                            <h6 class="text-center text-sm-left">Sign Up</h6>
+                            <p>Create a PlugMe account and update your portfolio.</p>
+                        </div>
+                        <div class="about-connect pl-3">
+                            <h6 class="text-center text-sm-left">Get Connected</h6>
+                            <p>Plug into opportunities that match your talent, interests, and rub minds with other creatives in your field.</p>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-6 mx-auto about-graphic pb-3">
+                        <img src="images/about_bg.png"/>
+                    </div>
+                    <div class="col-md-3 d-none d-md-flex">
+                        <div class="about-fanbase pl-3">
+                            <h6 class="text-center text-sm-left">Expand your Fan-base</h6>
+                            <p>Build a loyal fan-base by letting your work do the talking.</p>
+                        </div>
+                        <div class="about-creatvt pl-3">
+                            <h6 class="text-center text-sm-left">Boost your creativity</h6>
+                            <p>Use PlugMe's exclusive features, and watch your career take off</p>
+                        </div>
                     </div>
                 </div>
-                <div class="row plug-trends py-3">
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Opportunities</h4>
-                            <img src="images/opportunities.png"/>
-                        </a>
+                <div class="row">
+                    <div class="col-12 my-5 text-center">
+                        <span>"The platform that enables interaction between creatives and industry stakeholders, on all levels.</span>
+                        <span> Take advantage of all our unique features to build and keep track of your career."</span>
                     </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Pluggers</h4>
-                            <img src="images/pluggers.png"/>
-                        </a>
+                </div>
+                <div class="row pb-5">
+                    <div class="col-10 col-md-4">
+                        <figure class="figure">
+                            <img src="images/about_trend.png" class="figure-img rounded" alt=""/>
+                            <figcaption class="figure-caption mt-3">
+                                <h5>Creativity</h5>
+                                <p class="text-justify">A platform where you can freely express your creativity and interest(s). PlugMe
+                                    was designed for a wide scope of creatives within various fields(tags).<br>
+                                    You create? We are the Plug.
+                                </p>
+                            </figcaption>
+                        </figure>
                     </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Achievers</h4>
-                            <img src="images/achievers.png"/>
-                        </a>
+                    <div class="col-10 col-md-4">
+                        <figure class="figure">
+                            <img src="images/about_opp.png" class="figure-img rounded" alt=""/>
+                            <figcaption class="figure-caption mt-3">
+                                <h5>Opportunity</h5>
+                                <p class="text-justify">Finding creative services or talent(s) for a project or particular job has been
+                                    made seamless. With our 'Opportunities' feature, notify creatives in any desired location and
+                                    select the perfect match for the job.
+                                </p>
+                            </figcaption>
+                        </figure>
                     </div>
-                    <div class="col-sm-6 col-md-3 text-center">
-                        <a href="#" class="plug-trend-card">
-                            <h4>Tags</h4>
-                            <img src="images/tags.png"/>
-                        </a>
+                    <div class="col-10 col-md-4">
+                        <figure class="figure">
+                            <img src="images/about_reach.png" class="figure-img rounded" alt=""/>
+                            <figcaption class="figure-caption mt-3">
+                                <h5>Community</h5>
+                                <p class="text-justify">PlugMe is a platform where creative talents, content creators and content
+                                    lovers can connect.Feel free to reach out, share ideas and collaborate with talent in and outside
+                                    your field.
+                                </p>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>

@@ -32,7 +32,8 @@ nav.navbar .sign:last-child {
 nav.navbar .sign img {
     height: 20px;
 }
-nav.navbar .sign span, nav.navbar .sign:hover, nav.navbar .dropdown-menu .dropdown-item, .link-yellow, .link-yellow:hover {
+nav.navbar .sign span, nav.navbar .sign:hover, nav.navbar .dropdown-menu .dropdown-item, .link-yellow, .link-yellow:hover,
+#about figure h5, .plug-trends figure:hover figcaption {
     color: #fdc242;
 }
 nav.navbar .dropdown-toggle::after {
@@ -222,7 +223,7 @@ nav#mobile-plugMe-tab {
     background-size: cover;
 }
 .page-header h3, .page-header h4, .op-name, .up-name, .plug-view-card .plugger-info .view-plugger-name, .plug-tag span,
-.plugger-bio .bio-info .name {
+.plugger-bio .bio-info .name, #about .caption, #about h6, .bio-gallery label  {
     color: #5d3c9c;
     font-weight: 500;
 }
@@ -257,7 +258,8 @@ nav#mobile-plugMe-tab {
     box-shadow: 0 0 5px #73747799;
 }
 .plug-name, .plugger-bio .bio-rating, .plugger-bio .bio-header, .plug-metrics .icon, .plug-date, #opportunityTab .nav-lnk,
-.op-profile-desc, .op-comment span, .sign-cnt, .sign-ads, .sign-ads .link-yellow, .sign-caption .hd {
+#addContentTab .nav-link, .op-profile-desc, .op-comment span, .sign-cnt, .sign-ads, .sign-ads .link-yellow, .sign-caption .hd,
+#about figure h5 {
     font-weight: 500;
 }
 .plug-caption .plug-name, .plug-caption .plug-categories, .plug-caption .opp-plugger-name {
@@ -303,7 +305,7 @@ nav#mobile-plugMe-tab {
     max-height: 135px;
 }
 .plug-caption.active a.plug-name, .plugger-bio .bio-rating, .op-profile-desc, .plug-view-card .plugger-info .view-plugger-desc,
-.plug-metrics, .plug-tag, .plugger-bio .bio-info .desc, .up-desc {
+.plug-metrics, .plug-tag, .plugger-bio .bio-info .desc, .up-desc,#about .intro, #about p, #about .my-5 span {
     color: #86275d;
 }
 .plug-caption.active .plugger-name, .plug-caption.active .achiever-desc, .plugger-bio .bio-header, .page-navigation .active {
@@ -312,7 +314,7 @@ nav#mobile-plugMe-tab {
 .plug-caption.active .plug-categories, .plug-caption.active .likes, .plug-caption.active .views, .plug-caption.active
 .opp-plugger-name, .plugger-bio .bio-member.plug-view-card .plugger-info .view-plugger-location, .plug-date, .plugger-bio .location,
 .op-rating, .bio-rating i , .page-navigation, .op-location, .op-time, .op-comment, .op-profile-value, #plugMe-tab .nav-link,
-#profileTab .nav-link, .plugger-bio .bio-member {
+#profileTab .nav-link, .plugger-bio .bio-member, .plug-trends figure figcaption {
     color: #737477;
 }
 .bio-gallery .plug-card {
@@ -322,21 +324,68 @@ nav#mobile-plugMe-tab {
     background-color: white;
     max-height: 100px;
 }
-.bio-gallery .plug-card .plug-caption .plug-name {
+.bio-gallery .plug-card .plug-caption .plug-name, .bio-gallery label  {
     font-size: 0.875rem;
 }
 
-/*Styling for Trending Categories*/
-.plug-trends a {
-    color: #737477 !important;
-    text-decoration: none;
-}
-.plug-trend-card {
+/* Styling for Trending Categories */
+.plug-trends figure {
     width: 100%;
+    cursor: pointer;
+    transition: all 1s ease;
 }
-.plug-trend-card img {
+.plug-trends figure:hover {
+    box-shadow: 0 0 5px #d8d8d8;
+    border-radius: 1rem 0.25rem 1rem 0.25rem;
+    background-color: white;
+}
+.plug-trends figure img {
+    object-fit: contain;
+    width: 80%;
+    height: 200px;
+}
+
+/* Styling for About Categories */
+.about-graphic img{
     object-fit: cover;
     width: 100%;
+}
+#about p {
+    font-size: 0.875rem;
+}
+.about-sign-up, .about-connect, .about-fanbase, .about-creatvt {
+    position: absolute;
+}
+.about-sign-up, .about-connect {
+    right: 0;
+}
+.about-fanbase, .about-creatvt {
+    left: 0;
+}
+.about-sign-up {
+    top: 12.5%;
+}
+.about-connect {
+    top: 62.5%;
+}
+.about-fanbase {
+    top: 32%;
+}
+.about-creatvt {
+    top: 80%;
+}
+#about figure {
+    width: 70%;
+    margin-left: 15%;
+}
+#about figure img {
+    object-fit: contain;
+    width: 100%;
+    height: 150px;
+}
+#about figure figcaption {
+    width: 120%;
+    margin-left: -10%;
 }
 
 /*Styling for Profile Page (Portfolio Section)*/
@@ -349,7 +398,7 @@ nav#mobile-plugMe-tab {
     box-shadow: 0 0 5px #73747799;
     overflow: hidden;
 }
-.plugger-bio, #opTab-content  {
+.plugger-bio, #opTab-content, #ocTab-content {
     padding: 1.25rem;
 }
 .plugger-bio {
@@ -383,20 +432,33 @@ nav#mobile-plugMe-tab {
 .top-right img {
     height: 1rem;
 }
+.bio-gallery .form-control {
+    border-radius: 0.675rem 0.125rem;
+    border: 1px solid #73747799;
+    font-size: 0.875rem;
+}
+.bio-gallery input::placeholder, .bio-gallery textarea::placeholder {
+    color: #ced4da;
+}
+.bio-gallery .form-control:focus {
+    border: 1px solid #73747799;
+    box-shadow: inset 0 0 5px #ced4da;
+}
 
 /*Styling for Profile Page (Opportunity Section)*/
-#opportunityTab {
+#opportunityTab, #addContentTab {
     background-color:  #e1e1e1;
 }
-#opportunityTab .nav-link, .counter {
+#opportunityTab .nav-link,#addContentTab .nav-link, .counter {
     font-size: 1rem;
     color: white !important;
     line-height: 1;
 }
-#opportunityTab .nav-link.active, .counter {
+#opportunityTab .nav-link.active, #addContentTab .nav-link.active, .counter {
     background-color: #fdc242;
 }
-.op-name, .op-location, .op-time, .up-name, .up-desc, .op-profile-desc, .op-comment, .op-rating {
+.op-name, .op-location, .op-time, .up-name, .up-desc, .op-profile-desc, .op-comment, .op-rating,#about .caption, #about .intro,
+#about .my-5 span {
     display: block;
 }
 .no-decor {

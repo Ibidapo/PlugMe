@@ -23,6 +23,26 @@ $(document).ready(function(){
         $('.mobile-tab-name').html(mobileTab);
     });
 
+    $('a.menu-tab[href="#trend"]').click(function() {
+        $('#plugMe-tab a[href="#trend"]').tab('show')
+    });
+
+    $('a.menu-tab[href="#gallery"]').click(function() {
+        $('#plugMe-tab a[href="#gallery"]').tab('show')
+    });
+
+    $('a.menu-tab[href="#opp"]').click(function() {
+        $('#plugMe-tab a[href="#opp"]').tab('show')
+    });
+
+    $('a.menu-tab[href="#blog"]').click(function() {
+        $('#plugMe-tab a[href="#blog"]').tab('show')
+    });
+
+    $('a.menu-tab[href="#about"]').click(function() {
+        $('#plugMe-tab a[href="#about"]').tab('show')
+    });
+
     $('.plug-card').mouseenter(function() {
         $(this).children('.plug-caption').addClass('active');
         $(this).find('.plug-details').removeClass('d-none').addClass('d-block');
