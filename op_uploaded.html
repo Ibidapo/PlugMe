@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>PlugMe | User Profile - Opportunity Achieved</title>
+    <title>PlugMe | User Profile - Uploaded Opportunities</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,9 +15,9 @@
     <nav class="navbar fixed-top">
         <a href="index.html" class="plugme-logo"><img src="images/logo.png" height="40"/></a>
         <div class="input-group input-group-sm ml-auto mr-0 mx-md-auto">
-                    <span class="input-group-btn">
-                        <button class="btn" type="button">Search</button>
-                    </span>
+                <span class="input-group-btn">
+                    <button class="btn" type="button">Search</button>
+                </span>
             <input type="text" class="form-control" placeholder="Plug Me to..." aria-label="Plug Me to...">
         </div>
         <a href="#" class="sign d-none d-md-block"><img src="images/sign_up.png"/> Sign <span>Up</span></a>
@@ -82,19 +82,72 @@
         <a class="nav-item nav-link ml-3 ml-lg-5" href="#"><img src="images/refresh.png" class="mb-1" height="15"/> Refresh</a>
     </nav>
     <div class="container-fluid main-page">
+        <!-- Display Modal of the Plug Card. Please note that this instance of the modal is loaded for every plug-card below-->
+        <div class="modal fade" id="plugModal" tabindex="-1" role="dialog" aria-labelledby="pludModalEx" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="pludModalEx">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-md-8 plug-content">
+                                    <div class="plug-view"></div>
+                                </div>
+                                <div class="col-12 col-md-4 plug-info">
+                                    <div class="row plug-view-card no-gutters">
+                                        <div class="col-5 plugger-img"></div>
+                                        <div class=" col-7 plugger-info">
+                                            <a href="#" class="view-plugger-name">John Doe</a><br>
+                                            <a href="#" class="view-plugger-desc">Graphic Designer</a><br>
+                                            <a href="#" class="view-plugger-location">Lagos, Nigeria</a>
+                                        </div>
+                                        <hr>
+                                        <div class="col-12 plug-metrics">
+                                            <div class="row">
+                                                <div class="col-6 icon">Views</div><div class="col-6 text-right value">30,594</div>
+                                                <div class="col-6 icon">Likes</div><div class="col-6 text-right value">2,843</div>
+                                                <div class="col-6 icon">Feedback</div><div class="col-6 text-right value">621</div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="col-12 plug-tag">
+                                            <div class="row">
+                                                <div class="col-12"><span>Tags</span></div>
+                                                <div class="col-12">#GraphicDesign #VideoProduction #Animation</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 plug-like-btn my-2 text-center">
+                                            <a href="#" class="btn plug-btn-sm btn-yellow">Like <img src="images/likes_2.png"/></a>
+                                        </div>
+                                        <div class="col-12 plug-date text-right">Posted on 14th Dec, 2017.</div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- User Bio and Plug collection -->
         <div class="container py-4">
             <!-- Profile Tabs -->
             <nav class="nav justify-content-center pb-2" id="profileTab" role="tablist">
                 <a class="nav-item nav-link" id="portfolio-tab" data-toggle="tab" href="#" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
-                <a class="nav-item nav-link" id="opportunity-tab" data-toggle="tab" href="#" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
-                <a class="nav-item nav-link active" id="achievement-tab" data-toggle="tab" href="#" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
+                <a class="nav-item nav-link active" id="opportunity-tab" data-toggle="tab" href="#" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
+                <a class="nav-item nav-link" id="achievement-tab" data-toggle="tab" href="#" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
             </nav>
             <div class="row pb-3">
                 <!-- Describes Navigation history -->
                 <div class="col-12 page-navigation pb-2">
-                    Profile&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Achievements&nbsp;&nbsp;
-                    <span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Bill board Advert</span>
+                    Profile&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Opportunities&nbsp;&nbsp;
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Available&nbsp;&nbsp;<span class="active">
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Bill board Advert</span>
                 </div>
                 <!-- User Bio -->
                 <div class="col-md-4 px-2">
@@ -202,15 +255,12 @@
                     <div class="bio-opportunity">
                         <!-- Opportunity Profile -->
                         <div class="row p-1-25">
-                            <!-- Opportunity Header with name, location and status -->
-                            <div class="col-12 col-md-9 text-center text-md-left">
+                            <!-- Opportunity Header, with name and location -->
+                            <div class="col-12">
                                 <span class="op-name">Bill board Advert</span>
                                 <span class="op-location"><img src="images/marker.png"/> Lagos, Nigeria</span>
+                                <hr>
                             </div>
-                            <div class="col-12 col-md-3 ach-status text-center text-md-right">
-                                <img src="images/pending.png"/>
-                            </div>
-                            <div class="col-12"><hr></div>
                             <!-- Other Opportunity Information -->
                             <div class="col-12">
                                 <!-- Position Information -->
@@ -250,25 +300,141 @@
                                 </p>
                                 <!-- Reviews Collapse Button -->
                                 <p class="px-lg-3 pb-3 mt-5 mb-0 text-center">
-                                    <a class="btn btn-yellow plug-btn" data-toggle="collapse" href="#ach-review" aria-expanded="false" aria-controls="ach_review">Reviews&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                    <a class="btn btn-yellow plug-btn" data-toggle="collapse" href="#ach-review" aria-expanded="false" aria-controls="ach_review">Plug Entries <i class="fa fa-caret-up" aria-hidden="true"></i></a>
                                 </p>
                                 <div class="px-lg-3 collapse" id="ach-review">
                                     <hr>
                                     <div class="card card-body">
-                                        <p>
-                                            <span class="op-profile-desc">Comment</span>
-                                            <span class="op-profile-value">Awesome job, looking forward to future collaborations...</span>
-                                        </p>
-                                        <p>
-                                            <span class="op-profile-desc">Rating</span>
-                                            <span class="op-profile-value">
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            </span>
-                                        </p>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto" data-toggle="modal" data-target="#plugModal">
+                                                    <img src="images/user.png"/>
+                                                    <div class="plug-cancel">
+                                                        <img src="images/remove.png"/>
+                                                    </div>
+                                                    <div class="plug-action text-center">
+                                                        <a href="#" class="btn btn-yellow plug-btn-sm mb-1">Plug Me</a><br>
+                                                        <a href="#"><img src="images/massage.png"/></a>
+                                                    </div>
+                                                    <div class="plug-caption px-2 py-1">
+                                                        <a href="#" class="plug-name">John Ibrahim</a>
+                                                        <div class="plug-details d-none">
+                                                            <a href="#" class="achiever-desc mt-1">Graphic Designer</a>
+                                                        </div>
+                                                        <hr>
+                                                        <span class="likes">Likes</span>
+                                                        <span class="views text-right">Views</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto" data-toggle="modal" data-target="#plugModal">
+                                                    <img src="images/user.png"/>
+                                                    <div class="plug-cancel">
+                                                        <img src="images/remove.png"/>
+                                                    </div>
+                                                    <div class="plug-action text-center">
+                                                        <a href="#" class="btn btn-yellow plug-btn-sm mb-1">Plug Me</a><br>
+                                                        <a href="#"><img src="images/massage.png"/></a>
+                                                    </div>
+                                                    <div class="plug-caption px-2 py-1">
+                                                        <a href="#" class="plug-name">Adewale Chukwuemeka</a>
+                                                        <div class="plug-details d-none">
+                                                            <a href="#" class="achiever-desc mt-1">Fashion Designer</a>
+                                                        </div>
+                                                        <hr>
+                                                        <span class="likes">Likes</span>
+                                                        <span class="views text-right">Views</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto" data-toggle="modal" data-target="#plugModal">
+                                                    <img src="images/user.png"/>
+                                                    <div class="plug-cancel">
+                                                        <img src="images/remove.png"/>
+                                                    </div>
+                                                    <div class="plug-action text-center">
+                                                        <a href="#" class="btn btn-yellow plug-btn-sm mb-1">Plug Me</a><br>
+                                                        <a href="#"><img src="images/massage.png"/></a>
+                                                    </div>
+                                                    <div class="plug-caption px-2 py-1">
+                                                        <a href="#" class="plug-name">John Ibrahim</a>
+                                                        <div class="plug-details d-none">
+                                                            <a href="#" class="achiever-desc mt-1">Graphic Designer</a>
+                                                        </div>
+                                                        <hr>
+                                                        <span class="likes">Likes</span>
+                                                        <span class="views text-right">Views</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto" data-toggle="modal" data-target="#plugModal">
+                                                    <img src="images/user.png"/>
+                                                    <div class="plug-cancel">
+                                                        <img src="images/remove.png"/>
+                                                    </div>
+                                                    <div class="plug-action text-center">
+                                                        <a href="#" class="btn btn-yellow plug-btn-sm mb-1">Plug Me</a><br>
+                                                        <a href="#"><img src="images/massage.png"/></a>
+                                                    </div>
+                                                    <div class="plug-caption px-2 py-1">
+                                                        <a href="#" class="plug-name">Adewale Chukwuemeka</a>
+                                                        <div class="plug-details d-none">
+                                                            <a href="#" class="achiever-desc mt-1">Fashion Designer</a>
+                                                        </div>
+                                                        <hr>
+                                                        <span class="likes">Likes</span>
+                                                        <span class="views text-right">Views</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                                <div class="plug-card mt-2 mb-3 mx-auto">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <nav aria-label="Page navigation example">
+                                                    <ul class="pagination justify-content-end px-3">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
+                                                                <span aria-hidden="true"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">...</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" aria-label="Next">
+                                                                <span aria-hidden="true"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -288,8 +454,8 @@
                     <div class="input-group input-group-sm">
                         <input type="text" class="form-control" placeholder="Email" aria-label="Email">
                         <span class="input-group-btn">
-                                <button class="btn" type="button">Subscribe</button>
-                              </span>
+                            <button class="btn" type="button">Subscribe</button>
+                          </span>
                     </div>
                 </div>
                 <div class="col-10 col-md-6">

@@ -8,8 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="overflow-x: hidden;">
     <!-- Navigation with Search across all viewports -->
@@ -160,12 +161,12 @@
         <div class="container py-4">
             <!-- Profile Tabs -->
             <nav class="nav justify-content-center pb-2" id="profileTab" role="tablist">
-                <a class="nav-item nav-link active" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
-                <a class="nav-item nav-link" id="opportunity-tab" data-toggle="tab" href="#opportunity" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
+                <a class="nav-item nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
+                <a class="nav-item nav-link active" id="opportunity-tab" data-toggle="tab" href="#opportunity" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
                 <a class="nav-item nav-link" id="achievement-tab" data-toggle="tab" href="#achievement" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
             </nav>
             <div class="tab-content" id="profileTab-content">
-                <div class="tab-pane fade show active" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
+                <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
                     <div class="row pb-3">
                         <!-- Describes Navigation history -->
                         <div class="col-12 page-navigation pb-2">
@@ -176,16 +177,27 @@
                         <div class="col-md-4 px-2">
                             <div class="row plugger-bio no-gutters">
                                 <!-- Msg images appear when looking at a third parties profile -->
-                                <a href="#" class="top-right"><img src="images/massage.png"/></a>
-                                <div class="col-auto col-md-12 col-lg-auto bio-img text-md-center text-lg-left">
-                                    <img class="pr-3 pr-md-0 pr-lg-3" src="images/user.png"/>
+                                <div class="col-12">
+                                    <div class="media">
+                                        <img class="plugger-img align-self-end bio-img mx-auto pr-3 pr-md-0 pr-lg-3" src="images/user.png" alt="Generic placeholder image">
+                                        <div class="media-body d-md-none d-lg-flex">
+                                            <div class="bio-info text-md-center text-lg-left mt-2">
+                                                <a href="#" class="name">John Doe</a><br>
+                                                <a href="#" class="desc">Graphic Designer</a><br>
+                                                <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                                <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col col-md-12 col-lg-auto bio-info text-md-center text-lg-left mt-2">
-                                    <a href="#" class="name">John Doe</a><br>
-                                    <a href="#" class="desc">Graphic Designer</a><br>
-                                    <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a>
+                                <div class="col-12 d-none d-md-block d-lg-none">
+                                    <div class="bio-info text-md-center text-lg-left mt-2">
+                                        <a href="#" class="name">John Doe</a><br>
+                                        <a href="#" class="desc">Graphic Designer</a><br>
+                                        <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                        <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
+                                    </div>
                                 </div>
-                                <div class="w-100"></div>
                                 <hr>
                                 <div class="col-12 plug-metrics">
                                     <div class="row">
@@ -267,14 +279,12 @@
                             <div class="bio-gallery">
                                 <!-- Available and Uploaded Opportunities in tabs -->
                                 <nav class="nav nav-justified" id="addContentTab" role="tablist">
-                                    <a class="nav-item nav-link active" id="addImg-tab" data-toggle="tab" href="#addImg" role="tab" aria-controls="avail" aria-selected="true">Add Image</a>
-                                    <a class="nav-item nav-link" id="addVid-tab" data-toggle="tab" href="#addVid" role="tab" aria-controls="upload" aria-selected="false">Add Video</a>
+                                    <a class="nav-item nav-link active" id="addImg-tab" data-toggle="tab" href="#addImg" role="tab" aria-controls="addImg" aria-selected="true">Add Image</a>
+                                    <a class="nav-item nav-link" id="addVid-tab" data-toggle="tab" href="#addVid" role="tab" aria-controls="addVid" aria-selected="false">Add Video</a>
                                 </nav>
                                 <div class="tab-content" id="ocTab-content">
                                     <div class="tab-pane fade show active" id="addImg" role="tabpanel" aria-labelledby="addImg-tab">
-                                        <form action="" class="dropzone" id="my-awesome-dropzone">
-                                            <input type="file" name="file" />
-                                        </form>
+                                        <form action="/" class="dropzone" id="my-awesome-dropzone"></form>
                                         <form>
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -293,18 +303,25 @@
                                                         <textarea class="form-control" id="imgDesc" placeholder="Content Description" rows="5"></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 text-center mt-3">
+                                                <div class="col-12 text-center mt-3 mb-4">
                                                     <button type="submit" class="btn btn-yellow plug-btn">Publish</button>
                                                 </div>
                                             </div>
                                         </form>
+                                        <div class="up-discliamer text-center">
+                                            By clicking <span class="link-yellow">'Publish',</span> you agree to the
+                                            <span class="mobile-tab-name"> Terms & Conditions</span> and
+                                            <span class="mobile-tab-name">Privacy Policy.</span>
+                                        </div>
                                     </div>
                                     <div class="tab-pane fade" id="addVid" role="tabpanel" aria-labelledby="addVid-tab">
-                                        <form action="" class="dropzone" id="my-awesome-dropzone">
-                                            <input type="file" name="file" />
-                                        </form>
                                         <form>
                                             <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="vid-box">
+                                                        <input type="text" class="vid-url" placeholder="PASTE VIDEO URL HERE TO UPLOAD">
+                                                    </div>
+                                                </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="title">Title</label>
@@ -321,37 +338,55 @@
                                                         <textarea class="form-control" id="vidDesc" placeholder="Content Description" rows="5"></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 text-center mt-3">
+                                                <div class="col-12 text-center mt-3 mb-4">
                                                     <button type="submit" class="btn btn-yellow plug-btn">Publish</button>
                                                 </div>
                                             </div>
                                         </form>
+                                        <div class="up-discliamer text-center">
+                                            By clicking <span class="link-yellow">'Publish',</span> you agree to the
+                                            <span class="mobile-tab-name"> Terms & Conditions</span> and
+                                            <span class="mobile-tab-name">Privacy Policy.</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="opportunity" role="tabpanel" aria-labelledby="opportunity-tab">
+                <div class="tab-pane fade show active" id="opportunity" role="tabpanel" aria-labelledby="opportunity-tab">
                     <div class="row pb-3">
                         <!-- Describes Navigation history -->
                         <div class="col-12 page-navigation pb-2">
-                            Profile&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Opportunities&nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Available</span>
+                            Profile&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Opportunities
+                            &nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;
+                            Add Opportunity</span>
                         </div>
                         <!-- User Bio -->
                         <div class="col-md-4 px-2">
                             <div class="row plugger-bio no-gutters">
                                 <!-- Msg images appear when looking at a third parties profile -->
-                                <a href="#" class="top-right"><img src="images/massage.png"/></a>
-                                <div class="col-auto col-md-12 col-lg-auto bio-img text-md-center text-lg-left">
-                                    <img class="pr-3 pr-md-0 pr-lg-3" src="images/user.png"/>
+                                <div class="col-12">
+                                    <div class="media">
+                                        <img class="plugger-img align-self-end bio-img mx-auto pr-3 pr-md-0 pr-lg-3" src="images/user.png" alt="Generic placeholder image">
+                                        <div class="media-body d-md-none d-lg-flex">
+                                            <div class="bio-info text-md-center text-lg-left mt-2">
+                                                <a href="#" class="name">John Doe</a><br>
+                                                <a href="#" class="desc">Graphic Designer</a><br>
+                                                <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                                <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col col-md-12 col-lg-auto bio-info text-md-center text-lg-left mt-2">
-                                    <a href="#" class="name">John Doe</a><br>
-                                    <a href="#" class="desc">Graphic Designer</a><br>
-                                    <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a>
+                                <div class="col-12 d-none d-md-block d-lg-none">
+                                    <div class="bio-info text-md-center text-lg-left mt-2">
+                                        <a href="#" class="name">John Doe</a><br>
+                                        <a href="#" class="desc">Graphic Designer</a><br>
+                                        <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                        <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
+                                    </div>
                                 </div>
-                                <div class="w-100"></div>
                                 <hr>
                                 <div class="col-12 plug-metrics">
                                     <div class="row">
@@ -431,241 +466,374 @@
                         <!-- User Opportunity Gallery -->
                         <div class="col-md-8 px-2 mt-4 mt-md-0">
                             <div class="bio-opportunity">
-                                <!-- Available and Uploaded Opportunities in tabs -->
-                                <nav class="nav nav-justified" id="opportunityTab" role="tablist">
-                                    <a class="nav-item nav-link" id="avail-tab" data-toggle="tab" href="#avail" role="tab" aria-controls="avail" aria-selected="true">Available</a>
-                                    <a class="nav-item nav-link active" id="upload-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="upload" aria-selected="false">Uploaded</a>
-                                </nav>
-                                <div class="tab-content" id="opTab-content">
-                                    <div class="tab-pane fade" id="avail" role="tabpanel" aria-labelledby="avail-tab">
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Pyramid Inc.</span>
-                                                    <span class="up-desc">Advert Agency</span>
-                                                </div>
+                                <div class="row no-gutters counter">
+                                    <div class="col-12 py-2 text-center">Add Opportunity</div>
+                                </div>
+                                <form>
+                                    <div class="row p-1-25">
+                                        <div class="col-12 col-sm-10 col-md-6 mx-auto">
+                                            <div class="form-group">
+                                                <label for="j-title">Job Title</label>
+                                                <input type="text" class="form-control" id="j-title" placeholder="Banner Design">
                                             </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Pyramid Inc.</span>
-                                                    <span class="up-desc">Advert Agency</span>
-                                                </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-6 mx-auto">
+                                            <div class="form-group">
+                                                <label for="pos">Position Needed</label>
+                                                <input type="text" class="form-control" id="pos" placeholder="Artist, Graphic Designer...">
                                             </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Pyramid Inc.</span>
-                                                    <span class="up-desc">Advert Agency</span>
-                                                </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-6 mx-auto">
+                                            <div class="form-group">
+                                                <label for="pro-dir">Professional Direction</label>
+                                                <input type="text" class="form-control" id="pro-dir" placeholder="Advertisement, Production...">
                                             </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Pyramid Inc.</span>
-                                                    <span class="up-desc">Advert Agency</span>
-                                                </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-6 col-lg-3 mx-auto">
+                                            <div class="form-group">
+                                                <label for="servc">Service Style</label>
+                                                <select id="servc" class="form-control">
+                                                    <option selected>-- Select --</option>
+                                                    <option value="1">Full-time</option>
+                                                    <option value="2">Part-time</option>
+                                                </select>
                                             </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Pyramid Inc.</span>
-                                                    <span class="up-desc">Advert Agency</span>
-                                                </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-6 col-lg-3 mx-auto">
+                                            <div class="form-group">
+                                                <label for="deadline">Deadline</label>
+                                                <input type="text" class="form-control" id="deadline" placeholder="01/25/2018">
                                             </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-6 col-lg-4 mx-auto">
+                                            <label for="budget">Budget</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="addon-budget">&#8358</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Pyramid Inc.</span>
-                                                    <span class="up-desc">Advert Agency</span>
-                                                </div>
+                                                <input type="number" class="form-control" id="budget"  aria-describedby="addon-budget"
+                                                       aria-label="&#8358" placeholder="180,000">
                                             </div>
-                                        </a>
-                                        <hr>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-6 col-lg-4 mx-auto">
+                                            <div class="form-group">
+                                                <label for="cont">Country</label>
+                                                <select class="form-control" id="cont">
+                                                    <option selected>-- Select --</option>
+                                                    <option value="Afghanistan">Afghanistan</option>
+                                                    <option value="Albania">Albania</option>
+                                                    <option value="Algeria">Algeria</option>
+                                                    <option value="American Samoa">American Samoa</option>
+                                                    <option value="Andorra">Andorra</option>
+                                                    <option value="Angola">Angola</option>
+                                                    <option value="Anguilla">Anguilla</option>
+                                                    <option value="Antartica">Antarctica</option>
+                                                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                                    <option value="Argentina">Argentina</option>
+                                                    <option value="Armenia">Armenia</option>
+                                                    <option value="Aruba">Aruba</option>
+                                                    <option value="Australia">Australia</option>
+                                                    <option value="Austria">Austria</option>
+                                                    <option value="Azerbaijan">Azerbaijan</option>
+                                                    <option value="Bahamas">Bahamas</option>
+                                                    <option value="Bahrain">Bahrain</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="Barbados">Barbados</option>
+                                                    <option value="Belarus">Belarus</option>
+                                                    <option value="Belgium">Belgium</option>
+                                                    <option value="Belize">Belize</option>
+                                                    <option value="Benin">Benin</option>
+                                                    <option value="Bermuda">Bermuda</option>
+                                                    <option value="Bhutan">Bhutan</option>
+                                                    <option value="Bolivia">Bolivia</option>
+                                                    <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+                                                    <option value="Botswana">Botswana</option>
+                                                    <option value="Bouvet Island">Bouvet Island</option>
+                                                    <option value="Brazil">Brazil</option>
+                                                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                    <option value="Bulgaria">Bulgaria</option>
+                                                    <option value="Burkina Faso">Burkina Faso</option>
+                                                    <option value="Burundi">Burundi</option>
+                                                    <option value="Cambodia">Cambodia</option>
+                                                    <option value="Cameroon">Cameroon</option>
+                                                    <option value="Canada">Canada</option>
+                                                    <option value="Cape Verde">Cape Verde</option>
+                                                    <option value="Cayman Islands">Cayman Islands</option>
+                                                    <option value="Central African Republic">Central African Republic</option>
+                                                    <option value="Chad">Chad</option>
+                                                    <option value="Chile">Chile</option>
+                                                    <option value="China">China</option>
+                                                    <option value="Christmas Island">Christmas Island</option>
+                                                    <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+                                                    <option value="Colombia">Colombia</option>
+                                                    <option value="Comoros">Comoros</option>
+                                                    <option value="Congo">Congo</option>
+                                                    <option value="Congo">Congo, the Democratic Republic of the</option>
+                                                    <option value="Cook Islands">Cook Islands</option>
+                                                    <option value="Costa Rica">Costa Rica</option>
+                                                    <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+                                                    <option value="Croatia">Croatia (Hrvatska)</option>
+                                                    <option value="Cuba">Cuba</option>
+                                                    <option value="Cyprus">Cyprus</option>
+                                                    <option value="Czech Republic">Czech Republic</option>
+                                                    <option value="Denmark">Denmark</option>
+                                                    <option value="Djibouti">Djibouti</option>
+                                                    <option value="Dominica">Dominica</option>
+                                                    <option value="Dominican Republic">Dominican Republic</option>
+                                                    <option value="East Timor">East Timor</option>
+                                                    <option value="Ecuador">Ecuador</option>
+                                                    <option value="Egypt">Egypt</option>
+                                                    <option value="El Salvador">El Salvador</option>
+                                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                    <option value="Eritrea">Eritrea</option>
+                                                    <option value="Estonia">Estonia</option>
+                                                    <option value="Ethiopia">Ethiopia</option>
+                                                    <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
+                                                    <option value="Faroe Islands">Faroe Islands</option>
+                                                    <option value="Fiji">Fiji</option>
+                                                    <option value="Finland">Finland</option>
+                                                    <option value="France">France</option>
+                                                    <option value="France Metropolitan">France, Metropolitan</option>
+                                                    <option value="French Guiana">French Guiana</option>
+                                                    <option value="French Polynesia">French Polynesia</option>
+                                                    <option value="French Southern Territories">French Southern Territories</option>
+                                                    <option value="Gabon">Gabon</option>
+                                                    <option value="Gambia">Gambia</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Germany">Germany</option>
+                                                    <option value="Ghana">Ghana</option>
+                                                    <option value="Gibraltar">Gibraltar</option>
+                                                    <option value="Greece">Greece</option>
+                                                    <option value="Greenland">Greenland</option>
+                                                    <option value="Grenada">Grenada</option>
+                                                    <option value="Guadeloupe">Guadeloupe</option>
+                                                    <option value="Guam">Guam</option>
+                                                    <option value="Guatemala">Guatemala</option>
+                                                    <option value="Guinea">Guinea</option>
+                                                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                                    <option value="Guyana">Guyana</option>
+                                                    <option value="Haiti">Haiti</option>
+                                                    <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
+                                                    <option value="Holy See">Holy See (Vatican City State)</option>
+                                                    <option value="Honduras">Honduras</option>
+                                                    <option value="Hong Kong">Hong Kong</option>
+                                                    <option value="Hungary">Hungary</option>
+                                                    <option value="Iceland">Iceland</option>
+                                                    <option value="India">India</option>
+                                                    <option value="Indonesia">Indonesia</option>
+                                                    <option value="Iran">Iran (Islamic Republic of)</option>
+                                                    <option value="Iraq">Iraq</option>
+                                                    <option value="Ireland">Ireland</option>
+                                                    <option value="Israel">Israel</option>
+                                                    <option value="Italy">Italy</option>
+                                                    <option value="Jamaica">Jamaica</option>
+                                                    <option value="Japan">Japan</option>
+                                                    <option value="Jordan">Jordan</option>
+                                                    <option value="Kazakhstan">Kazakhstan</option>
+                                                    <option value="Kenya">Kenya</option>
+                                                    <option value="Kiribati">Kiribati</option>
+                                                    <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of</option>
+                                                    <option value="Korea">Korea, Republic of</option>
+                                                    <option value="Kuwait">Kuwait</option>
+                                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                    <option value="Lao">Lao People's Democratic Republic</option>
+                                                    <option value="Latvia">Latvia</option>
+                                                    <option value="Lebanon">Lebanon</option>
+                                                    <option value="Lesotho">Lesotho</option>
+                                                    <option value="Liberia">Liberia</option>
+                                                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                                    <option value="Liechtenstein">Liechtenstein</option>
+                                                    <option value="Lithuania">Lithuania</option>
+                                                    <option value="Luxembourg">Luxembourg</option>
+                                                    <option value="Macau">Macau</option>
+                                                    <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
+                                                    <option value="Madagascar">Madagascar</option>
+                                                    <option value="Malawi">Malawi</option>
+                                                    <option value="Malaysia">Malaysia</option>
+                                                    <option value="Maldives">Maldives</option>
+                                                    <option value="Mali">Mali</option>
+                                                    <option value="Malta">Malta</option>
+                                                    <option value="Marshall Islands">Marshall Islands</option>
+                                                    <option value="Martinique">Martinique</option>
+                                                    <option value="Mauritania">Mauritania</option>
+                                                    <option value="Mauritius">Mauritius</option>
+                                                    <option value="Mayotte">Mayotte</option>
+                                                    <option value="Mexico">Mexico</option>
+                                                    <option value="Micronesia">Micronesia, Federated States of</option>
+                                                    <option value="Moldova">Moldova, Republic of</option>
+                                                    <option value="Monaco">Monaco</option>
+                                                    <option value="Mongolia">Mongolia</option>
+                                                    <option value="Montserrat">Montserrat</option>
+                                                    <option value="Morocco">Morocco</option>
+                                                    <option value="Mozambique">Mozambique</option>
+                                                    <option value="Myanmar">Myanmar</option>
+                                                    <option value="Namibia">Namibia</option>
+                                                    <option value="Nauru">Nauru</option>
+                                                    <option value="Nepal">Nepal</option>
+                                                    <option value="Netherlands">Netherlands</option>
+                                                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                                    <option value="New Caledonia">New Caledonia</option>
+                                                    <option value="New Zealand">New Zealand</option>
+                                                    <option value="Nicaragua">Nicaragua</option>
+                                                    <option value="Niger">Niger</option>
+                                                    <option value="Nigeria">Nigeria</option>
+                                                    <option value="Niue">Niue</option>
+                                                    <option value="Norfolk Island">Norfolk Island</option>
+                                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                                    <option value="Norway">Norway</option>
+                                                    <option value="Oman">Oman</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Palau">Palau</option>
+                                                    <option value="Panama">Panama</option>
+                                                    <option value="Papua New Guinea">Papua New Guinea</option>
+                                                    <option value="Paraguay">Paraguay</option>
+                                                    <option value="Peru">Peru</option>
+                                                    <option value="Philippines">Philippines</option>
+                                                    <option value="Pitcairn">Pitcairn</option>
+                                                    <option value="Poland">Poland</option>
+                                                    <option value="Portugal">Portugal</option>
+                                                    <option value="Puerto Rico">Puerto Rico</option>
+                                                    <option value="Qatar">Qatar</option>
+                                                    <option value="Reunion">Reunion</option>
+                                                    <option value="Romania">Romania</option>
+                                                    <option value="Russia">Russian Federation</option>
+                                                    <option value="Rwanda">Rwanda</option>
+                                                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                    <option value="Saint LUCIA">Saint LUCIA</option>
+                                                    <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
+                                                    <option value="Samoa">Samoa</option>
+                                                    <option value="San Marino">San Marino</option>
+                                                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                                    <option value="Senegal">Senegal</option>
+                                                    <option value="Seychelles">Seychelles</option>
+                                                    <option value="Sierra">Sierra Leone</option>
+                                                    <option value="Singapore">Singapore</option>
+                                                    <option value="Slovakia">Slovakia (Slovak Republic)</option>
+                                                    <option value="Slovenia">Slovenia</option>
+                                                    <option value="Solomon Islands">Solomon Islands</option>
+                                                    <option value="Somalia">Somalia</option>
+                                                    <option value="South Africa">South Africa</option>
+                                                    <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
+                                                    <option value="Span">Spain</option>
+                                                    <option value="SriLanka">Sri Lanka</option>
+                                                    <option value="St. Helena">St. Helena</option>
+                                                    <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
+                                                    <option value="Sudan">Sudan</option>
+                                                    <option value="Suriname">Suriname</option>
+                                                    <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
+                                                    <option value="Swaziland">Swaziland</option>
+                                                    <option value="Sweden">Sweden</option>
+                                                    <option value="Switzerland">Switzerland</option>
+                                                    <option value="Syria">Syrian Arab Republic</option>
+                                                    <option value="Taiwan">Taiwan, Province of China</option>
+                                                    <option value="Tajikistan">Tajikistan</option>
+                                                    <option value="Tanzania">Tanzania, United Republic of</option>
+                                                    <option value="Thailand">Thailand</option>
+                                                    <option value="Togo">Togo</option>
+                                                    <option value="Tokelau">Tokelau</option>
+                                                    <option value="Tonga">Tonga</option>
+                                                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                                    <option value="Tunisia">Tunisia</option>
+                                                    <option value="Turkey">Turkey</option>
+                                                    <option value="Turkmenistan">Turkmenistan</option>
+                                                    <option value="Turks and Caicos">Turks and Caicos Islands</option>
+                                                    <option value="Tuvalu">Tuvalu</option>
+                                                    <option value="Uganda">Uganda</option>
+                                                    <option value="Ukraine">Ukraine</option>
+                                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                                    <option value="United Kingdom">United Kingdom</option>
+                                                    <option value="United States">United States</option>
+                                                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                                    <option value="Uruguay">Uruguay</option>
+                                                    <option value="Uzbekistan">Uzbekistan</option>
+                                                    <option value="Vanuatu">Vanuatu</option>
+                                                    <option value="Venezuela">Venezuela</option>
+                                                    <option value="Vietnam">Viet Nam</option>
+                                                    <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                                                    <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
+                                                    <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
+                                                    <option value="Western Sahara">Western Sahara</option>
+                                                    <option value="Yemen">Yemen</option>
+                                                    <option value="Yugoslavia">Yugoslavia</option>
+                                                    <option value="Zambia">Zambia</option>
+                                                    <option value="Zimbabwe">Zimbabwe</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-6 col-lg-4 mx-auto">
+                                            <div class="form-group">
+                                                <label for="state">State</label>
+                                                <select class="form-control" id="state">
+                                                    <option selected>-- Select --</option>
+                                                    <option value="others">Other Countries</option>
+                                                    <option value="Abuja FCT">Abuja FCT</option>
+                                                    <option value="Abia">Abia</option>
+                                                    <option value="Adamawa">Adamawa</option>
+                                                    <option value="Akwa Ibom">Akwa Ibom</option>
+                                                    <option value="Anambra">Anambra</option>
+                                                    <option value="Bauchi">Bauchi</option>
+                                                    <option value="Bayelsa">Bayelsa</option>
+                                                    <option value="Benue">Benue</option>
+                                                    <option value="Borno">Borno</option>
+                                                    <option value="Cross River">Cross River</option>
+                                                    <option value="Delta">Delta</option>
+                                                    <option value="Ebonyi">Ebonyi</option>
+                                                    <option value="Edo">Edo</option>
+                                                    <option value="Ekiti">Ekiti</option>
+                                                    <option value="Enugu">Enugu</option>
+                                                    <option value="Gombe">Gombe</option>
+                                                    <option value="Imo">Imo</option>
+                                                    <option value="Jigawa">Jigawa</option>
+                                                    <option value="Kaduna">Kaduna</option>
+                                                    <option value="Kano">Kano</option>
+                                                    <option value="Katsina">Katsina</option>
+                                                    <option value="Kebbi">Kebbi</option>
+                                                    <option value="Kogi">Kogi</option>
+                                                    <option value="Kwara">Kwara</option>
+                                                    <option value="Lagos">Lagos</option>
+                                                    <option value="Nassarawa">Nassarawa</option>
+                                                    <option value="Niger">Niger</option>
+                                                    <option value="Ogun">Ogun</option>
+                                                    <option value="Ondo">Ondo</option>
+                                                    <option value="Osun">Osun</option>
+                                                    <option value="Oyo">Oyo</option>
+                                                    <option value="Plateau">Plateau</option>
+                                                    <option value="Rivers">Rivers</option>
+                                                    <option value="Sokoto">Sokoto</option>
+                                                    <option value="Taraba">Taraba</option>
+                                                    <option value="Yobe">Yobe</option>
+                                                    <option value="Zamfara">Zamfara</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-12 mx-auto">
+                                            <label for="op-tag">Tags</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="addon-tag">#</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="op-tag" aria-describedby="addon-tag"
+                                                       aria-label="#" placeholder="#GraphicDesign #Animation #Art">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-12 mx-auto">
+                                            <div class="form-group">
+                                                <label for="respon">Responsibilities</label>
+                                                <textarea class="form-control" id="respon" placeholder="Short description of plugger's need"
+                                                          rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center mt-3 mb-4">
+                                            <button type="submit" class="btn btn-yellow plug-btn">Publish</button>
+                                        </div>
                                     </div>
-                                    <div class="tab-pane fade show active" id="upload" role="tabpanel" aria-labelledby="upload-tab">
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/available.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Adewale</span>
-                                                    <span class="up-desc">Graphic Designer</span>
-                                                </div>
-                                                <div class="col-12 col-lg-7 mt-2 mt-lg-0 op-desc text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/pending.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Adewale</span>
-                                                    <span class="up-desc">Graphic Designer</span>
-                                                </div>
-                                                <div class="col-12 col-lg-7 mt-2 mt-lg-0 op-desc text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Adewale</span>
-                                                    <span class="up-desc">Graphic Designer</span>
-                                                </div>
-                                                <div class="col-12 col-lg-7 mt-2 mt-lg-0 op-desc text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Adewale</span>
-                                                    <span class="up-desc">Graphic Designer</span>
-                                                </div>
-                                                <div class="col-12 col-lg-7 mt-2 mt-lg-0 op-desc text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
-                                                    <img src="images/user.png"/>
-                                                    <span class="up-name">Adewale</span>
-                                                    <span class="up-desc">Graphic Designer</span>
-                                                </div>
-                                                <div class="col-12 col-lg-7 mt-2 mt-lg-0 op-desc text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                    </div>
+                                </form>
+                                <div class="up-discliamer text-center mb-3">
+                                    By clicking <span class="link-yellow">'Publish',</span> you agree to the
+                                    <span class="mobile-tab-name"> Terms & Conditions</span> and
+                                    <span class="mobile-tab-name">Privacy Policy.</span>
                                 </div>
                             </div>
                         </div>
@@ -681,16 +849,27 @@
                         <div class="col-md-4 px-2">
                             <div class="row plugger-bio no-gutters">
                                 <!-- Msg images appear when looking at a third parties profile -->
-                                <a href="#" class="top-right"><img src="images/massage.png"/></a>
-                                <div class="col-auto col-md-12 col-lg-auto bio-img text-md-center text-lg-left">
-                                    <img class="pr-3 pr-md-0 pr-lg-3" src="images/user.png"/>
+                                <div class="col-12">
+                                    <div class="media">
+                                        <img class="plugger-img align-self-end bio-img mx-auto pr-3 pr-md-0 pr-lg-3" src="images/user.png" alt="Generic placeholder image">
+                                        <div class="media-body d-md-none d-lg-flex">
+                                            <div class="bio-info text-md-center text-lg-left mt-2">
+                                                <a href="#" class="name">John Doe</a><br>
+                                                <a href="#" class="desc">Graphic Designer</a><br>
+                                                <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                                <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col col-md-12 col-lg-auto bio-info text-md-center text-lg-left mt-2">
-                                    <a href="#" class="name">John Doe</a><br>
-                                    <a href="#" class="desc">Graphic Designer</a><br>
-                                    <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a>
+                                <div class="col-12 d-none d-md-block d-lg-none">
+                                    <div class="bio-info text-md-center text-lg-left mt-2">
+                                        <a href="#" class="name">John Doe</a><br>
+                                        <a href="#" class="desc">Graphic Designer</a><br>
+                                        <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                        <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
+                                    </div>
                                 </div>
-                                <div class="w-100"></div>
                                 <hr>
                                 <div class="col-12 plug-metrics">
                                     <div class="row">
@@ -937,7 +1116,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
     <script src="js/dropzone.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $( function() {
+            $('#deadline').datepicker();
+        } );
+
+        $(function(){
+            Dropzone.options.myAwesomeDropzone = {
+                paramName: "file", // The name that will be used to transfer the file
+                maxFilesize: 3, // MB
+                maxFiles: 1,
+                init:function() {
+                    var self = this;
+                    // config
+                    self.options.dictDefaultMessage = "Drag or Drop your files here",
+                    self.options.dictRemoveFile = "Delete";
+                },
+                accept: function(file, done) {
+                    if (file.name == " ") {
+                        done("no File was chosen");
+                    }
+                    else { done(); }
+                }
+
+            };
+        });
+    </script>
 </body>
 </html>

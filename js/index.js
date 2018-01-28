@@ -51,12 +51,31 @@ $(document).ready(function(){
         $(this).find('.plug-details').addClass('d-none').removeClass('d-block');
     });
 
-    $('.plug-card').click(function(){
-        var plugName = $(this).find('.plug-name').text();
-        $('.modal-title').html(plugName);
+    $('.bio-opportunity .plug-card').mouseenter(function(){
+        $(this).children('.plug-action').fadeIn();
+    }).mouseleave(function(){
+        $(this).children('.plug-action').fadeOut();
     });
 
     $('.plug-btn[data-toggle="collapse"]').click(function () {
         $('.plug-btn[data-toggle="collapse"]').children('i').toggleClass('active');
     });
+
+    $('#fdbk-trigger').focus(function(){
+        $('.plug-view-card').fadeOut();
+        $('.plug-feedback').fadeIn();
+    });
+
+    $('.plug-feedback .fa-close').click(function() {
+        $('.plug-feedback').fadeOut();
+        $('.plug-view-card').fadeIn();
+    });
+
+    $('.add').mouseenter(function() {
+        $('.add-sym').fadeOut();
+        $('.add-exp').fadeIn();
+    }).mouseleave(function() {
+        $('.add-sym').fadeIn();
+        $('.add-exp').fadeOut();
+    })
 });

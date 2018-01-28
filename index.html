@@ -87,12 +87,6 @@
         <div class="modal fade" id="plugModal" tabindex="-1" role="dialog" aria-labelledby="pludModalEx" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h5 class="modal-title" id="pludModalEx">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="row">
@@ -101,19 +95,36 @@
                                 </div>
                                 <div class="col-12 col-md-4 plug-info">
                                     <div class="row plug-view-card no-gutters">
-                                        <div class="col-auto plugger-img"><img class="pr-3" src="images/user.png"/></div>
-                                        <div class="col plugger-info">
-                                            <a href="#" class="view-plugger-name">John Doe</a><br>
-                                            <a href="#" class="view-plugger-desc">Graphic Designer</a><br>
-                                            <a href="#" class="view-plugger-location"><img src="images/marker.png"/> Lagos, Nigeria</a>
+                                        <div class="col-12">
+                                            <div class="media">
+                                                <img class="plugger-img align-self-end mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <div class="plugger-info">
+                                                        <a href="#" class="view-plugger-name">John Doe</a><br>
+                                                        <a href="#" class="view-plugger-desc">Graphic Designer</a><br>
+                                                        <a href="#" class="view-plugger-location"><img src="images/marker.png"/> Lagos, Nigeria</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="w-100"></div>
                                         <hr>
                                         <div class="col-12 plug-metrics">
                                             <div class="row">
-                                                <div class="col-6 icon"><img src="images/bio_views.png"/> Views</div><div class="col-6 text-right value">30,594</div>
-                                                <div class="col-6 icon"><img src="images/bio_like.png"/> Likes</div><div class="col-6 text-right value">2,843</div>
-                                                <div class="col-6 icon">Feedback</div><div class="col-6 text-right value">621</div>
+                                                <div class="col-6 icon"><img src="images/bio_views.png"/> Views</div>
+                                                <div class="col-6 text-right value">30,594</div>
+                                                <div class="col-6 icon"><img src="images/bio_like.png"/> Likes</div>
+                                                <div class="col-6 text-right value">2,843</div>
+                                                <div class="col-6 icon"><img src="images/feedback.png"/> Feedback</div>
+                                                <div class="col-6 text-right value">621</div>
+                                                <div class="col-12">
+                                                    <div class="input-group input-group-sm mt-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="fdbk-dummy">Feedback</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="fdbk-trigger" aria-label="feedback"
+                                                               aria-describedby="fdbk-dummy" placeholder="any thoughts...">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <hr>
@@ -128,6 +139,83 @@
                                         </div>
                                         <div class="col-12 plug-date text-right">Posted on 14th Dec, 2017.</div>
                                         <hr>
+                                    </div>
+                                    <div class="row plug-feedback no-gutters pr-0">
+                                        <i class="fa fa-close" aria-hidden="true"></i>
+                                        <div style="overflow-y: scroll; height: 300px; width: 100%">
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 feed">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="col pl-0">
+                                                        <textarea class="form-control-plaintext" id="comment" placeholder="Comment..." rows="2"></textarea>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                       <a class="btn plug-btn-sm btn-yellow mt-3 mr-2" href="#">Post</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +236,9 @@
                 <div class="row page-content">
                     <div class="col-sm-6 col-md-4 col-lg-auto">
                         <div class="plug-card mt-2 mb-3 mx-auto" data-toggle="modal" data-target="#plugModal">
+                            <div class="plug-type">
+                                <img src="images/image.png"/>
+                            </div>
                             <div class="plug-caption px-3 py-1">
                                 <a href="#" class="plug-name">Max Payne</a>
                                 <div class="plug-details d-none">
@@ -162,6 +253,9 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-auto">
                         <div class="plug-card mt-2 mb-3 mx-auto" data-toggle="modal" data-target="#plugModal">
+                            <div class="plug-type">
+                                <img src="images/video.png"/>
+                            </div>
                             <div class="plug-caption px-3 py-1">
                                 <a href="#" class="plug-name">Max Payne</a>
                                 <div class="plug-details d-none">
@@ -246,8 +340,27 @@
                     <div class="w-100 d-none d-lg-block"></div>
                 </div>
                 <div class="row">
-                    <div class="col-12 text-center my-3">
-                        <a href="#" class="btn plug-btn btn-yellow">More</a>
+                    <div class="col-12 my-3">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center mt-3">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
+                                        <span aria-hidden="true"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">...</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div class="row plug-trends py-3 pb-5">
@@ -463,9 +576,28 @@
                     </div>
                     <div class="w-100 d-none d-lg-block"></div>
                 </div>
-                <div class="row">
-                    <div class="col-12 text-center my-3">
-                        <a href="#" class="btn plug-btn btn-yellow">More</a>
+                <div class="row pb-5">
+                    <div class="col-12 my-3">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center mt-3">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
+                                        <span aria-hidden="true"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">...</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -649,15 +781,34 @@
                     </div>
                     <div class="w-100 d-none d-lg-block"></div>
                 </div>
-                <div class="row">
-                    <div class="col-12 text-center my-3">
-                        <a href="#" class="btn plug-btn btn-yellow">More</a>
+                <div class="row pb-5">
+                    <div class="col-12 my-3">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center mt-3">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
+                                        <span aria-hidden="true"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">...</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
             <div class="container tab-pane fade" id="blog" role="tabpanel" aria-labelledby="nav-blog">
                 <div class="row page-header">
-                    <div class="col-12 mt-3" style="height: 300px">
+                    <div class="col-12 mt-3" style="height: 400px">
                         <h3 class="d-none d-md-block">Blog</h3>
                         <h4 class="d-block d-md-none text-center text-sm-left">Blog</h4>
                         <p>This Page redirects to Medium, where all the blog content, archives are being housed.</p>
