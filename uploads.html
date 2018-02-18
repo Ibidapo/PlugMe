@@ -161,12 +161,13 @@
         <div class="container py-4">
             <!-- Profile Tabs -->
             <nav class="nav justify-content-center pb-2" id="profileTab" role="tablist">
-                <a class="nav-item nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
-                <a class="nav-item nav-link active" id="opportunity-tab" data-toggle="tab" href="#opportunity" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
-                <a class="nav-item nav-link" id="achievement-tab" data-toggle="tab" href="#achievement" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
+                <a class="nav-item nav-link active" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
+                <a class="nav-item nav-link" id="opportunity-tab" data-toggle="tab" href="#opportunity" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
+                <a class="nav-item nav-link" id="achievement-tab" data-toggle="tab" href="#" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
+                <a class="nav-item nav-link" id="wallet-tab" data-toggle="tab" href="#" role="tab" aria-controls="wallet" aria-selected="false">Wallet</a>
             </nav>
             <div class="tab-content" id="profileTab-content">
-                <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
+                <div class="tab-pane fade show active" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
                     <div class="row pb-3">
                         <!-- Describes Navigation history -->
                         <div class="col-12 page-navigation pb-2">
@@ -354,7 +355,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade show active" id="opportunity" role="tabpanel" aria-labelledby="opportunity-tab">
+                <div class="tab-pane fade" id="opportunity" role="tabpanel" aria-labelledby="opportunity-tab">
                     <div class="row pb-3">
                         <!-- Describes Navigation history -->
                         <div class="col-12 page-navigation pb-2">
@@ -471,13 +472,19 @@
                                 </div>
                                 <form>
                                     <div class="row p-1-25">
-                                        <div class="col-12 col-sm-10 col-md-6 mx-auto">
+                                        <div class="col-12 col-sm-10 col-md-12 mx-auto">
                                             <div class="form-group">
                                                 <label for="j-title">Job Title</label>
                                                 <input type="text" class="form-control" id="j-title" placeholder="Banner Design">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-10 col-md-6 mx-auto">
+                                        <div class="col-12 col-sm-10 col-md-12 mx-auto">
+                                            <div class="form-group">
+                                                <label for="pro-dir">Professional Direction</label>
+                                                <input type="text" class="form-control" id="pro-dir" placeholder="Advertisement, Production...">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-10 col-md-12 col-lg-6 mx-auto">
                                             <div class="form-group">
                                                 <label for="pos">Position Needed</label>
                                                 <input type="text" class="form-control" id="pos" placeholder="Artist, Graphic Designer...">
@@ -485,24 +492,8 @@
                                         </div>
                                         <div class="col-12 col-sm-10 col-md-6 mx-auto">
                                             <div class="form-group">
-                                                <label for="pro-dir">Professional Direction</label>
-                                                <input type="text" class="form-control" id="pro-dir" placeholder="Advertisement, Production...">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-10 col-md-6 col-lg-3 mx-auto">
-                                            <div class="form-group">
-                                                <label for="servc">Service Style</label>
-                                                <select id="servc" class="form-control">
-                                                    <option selected>-- Select --</option>
-                                                    <option value="1">Full-time</option>
-                                                    <option value="2">Part-time</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-10 col-md-6 col-lg-3 mx-auto">
-                                            <div class="form-group">
                                                 <label for="deadline">Deadline</label>
-                                                <input type="text" class="form-control" id="deadline" placeholder="01/25/2018">
+                                                <input type="text" class="form-control" id="deadline" placeholder="mm/dd/yyyy">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-10 col-md-6 col-lg-4 mx-auto">
@@ -834,239 +825,6 @@
                                     By clicking <span class="link-yellow">'Publish',</span> you agree to the
                                     <span class="mobile-tab-name"> Terms & Conditions</span> and
                                     <span class="mobile-tab-name">Privacy Policy.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="achievement" role="tabpanel" aria-labelledby="achievement-tab">
-                    <div class="row pb-3">
-                        <!-- Describes Navigation history -->
-                        <div class="col-12 page-navigation pb-2">
-                            Profile&nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Achievements</span>
-                        </div>
-                        <!-- User Bio -->
-                        <div class="col-md-4 px-2">
-                            <div class="row plugger-bio no-gutters">
-                                <!-- Msg images appear when looking at a third parties profile -->
-                                <div class="col-12">
-                                    <div class="media">
-                                        <img class="plugger-img align-self-end bio-img mx-auto pr-3 pr-md-0 pr-lg-3" src="images/user.png" alt="Generic placeholder image">
-                                        <div class="media-body d-md-none d-lg-flex">
-                                            <div class="bio-info text-md-center text-lg-left mt-2">
-                                                <a href="#" class="name">John Doe</a><br>
-                                                <a href="#" class="desc">Graphic Designer</a><br>
-                                                <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
-                                                <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 d-none d-md-block d-lg-none">
-                                    <div class="bio-info text-md-center text-lg-left mt-2">
-                                        <a href="#" class="name">John Doe</a><br>
-                                        <a href="#" class="desc">Graphic Designer</a><br>
-                                        <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
-                                        <a href="#" class="plug-msg"><img src="images/massage.png"/></a>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="col-12 plug-metrics">
-                                    <div class="row">
-                                        <div class="col-6 icon"><img src="images/bio_views.png"/> Views</div><div class="col-6 value text-right">30,594</div>
-                                        <div class="col-6 icon"><img src="images/bio_like.png"/> Likes</div><div class="col-6 value text-right">2,843</div>
-                                        <div class="col-6 icon"><img src="images/fan_base.png"/> Followers</div><div class="col-6 value text-right">621</div>
-                                        <div class="col-6 icon"><img src="images/fan_of.png"/> Following</div><div class="col-6 value text-right">231</div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="col-12 bio-rating">
-                                    <div class="row">
-                                        <div class="col-6 col-md-12 col-lg-6 text-md-center text-lg-left">Achievements</div>
-                                        <div class="col-6 col-md-12 col-lg-6 text-right text-md-center text-lg-right">
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="col-6 col-md-12 col-lg-6 text-md-center text-lg-left">Opportunities</div>
-                                        <div class="col-6 col-md-12 col-lg-6 text-right text-md-center text-lg-right">
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="col-12 bio-story">
-                                    <div class="row">
-                                        <div class="col-12 bio-header mb-1">Bio</div>
-                                        <div class="col-12">
-                                            <br><br><br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="col-12 bio-contact">
-                                    <div class="row">
-                                        <div class=" col-12 bio-header mb-1">Booking Info</div>
-                                        <div class="col-12">
-                                            <br><br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="col-12 bio-exp">
-                                    <div class="row">
-                                        <div class="col-12 bio-header mb-1">Experience</div>
-                                        <div class="col-12">
-                                            <br><br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="col-12 bio-tag">
-                                    <div class="row">
-                                        <div class="col-12 bio-header mb-1">Tags</div>
-                                        <div class="row">
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <!-- The Edit button is visible only when account owner, is view own account -->
-                                <div class="col-12 bio-edit text-center mb-3">
-                                    <a href="#" class="btn btn-yellow plug-btn">Edit Profile</a>
-                                </div>
-                                <div class="col-12 bio-member text-center">
-                                    MEMBER SINCE: NOVEMBER 17, 2017.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- User Achievement Gallery -->
-                        <div class="col-md-8 px-2 mt-4 mt-md-0">
-                            <div class="bio-achievement">
-                                <div class="row no-gutters counter">
-                                    <div class="col-12 py-2 text-center">
-                                        186 Contents
-                                    </div>
-                                </div>
-                                <div class="row p-1-25">
-                                    <div class="col-12">
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/pending.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/pending.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_available.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
-                                                    <span class="op-rating">
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/done.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                    </div>
                                 </div>
                             </div>
                         </div>

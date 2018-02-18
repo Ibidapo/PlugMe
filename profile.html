@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>PlugMe | User Profile - Bio, Opportunities and Achievements</title>
+    <title>PlugMe | User Profile - Portfolio, Opportunities, Achievements & Wallet</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -106,12 +106,6 @@
         <div class="modal fade" id="plugModal" tabindex="-1" role="dialog" aria-labelledby="pludModalEx" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h5 class="modal-title" id="pludModalEx">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="row">
@@ -120,24 +114,42 @@
                                 </div>
                                 <div class="col-12 col-md-4 plug-info">
                                     <div class="row plug-view-card no-gutters">
-                                        <div class="col-5 plugger-img"></div>
-                                        <div class=" col-7 plugger-info">
-                                            <a href="#" class="view-plugger-name">John Doe</a><br>
-                                            <a href="#" class="view-plugger-desc">Graphic Designer</a><br>
-                                            <a href="#" class="view-plugger-location">Lagos, Nigeria</a>
+                                        <div class="col-12">
+                                            <div class="media">
+                                                <img class="plugger-img align-self-end mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <div class="plugger-info">
+                                                        <a href="#" class="view-plugger-name">John Doe</a><br>
+                                                        <a href="#" class="view-plugger-desc">Graphic Designer</a><br>
+                                                        <a href="#" class="view-plugger-location"><img src="images/marker.png"/> Lagos, Nigeria</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <hr>
                                         <div class="col-12 plug-metrics">
                                             <div class="row">
-                                                <div class="col-6 icon">Views</div><div class="col-6 text-right value">30,594</div>
-                                                <div class="col-6 icon">Likes</div><div class="col-6 text-right value">2,843</div>
-                                                <div class="col-6 icon">Feedback</div><div class="col-6 text-right value">621</div>
+                                                <div class="col-6 icon"><img src="images/bio_views.png"/> Views</div>
+                                                <div class="col-6 text-right value">30,594</div>
+                                                <div class="col-6 icon"><img src="images/bio_like.png"/> Likes</div>
+                                                <div class="col-6 text-right value">2,843</div>
+                                                <div class="col-6 icon"><img src="images/feedback.png"/> Feedback</div>
+                                                <div class="col-6 text-right value">621</div>
+                                                <div class="col-12">
+                                                    <div class="input-group input-group-sm mt-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="fdbk-dummy">Feedback</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="fdbk-trigger" aria-label="feedback"
+                                                               aria-describedby="fdbk-dummy" placeholder="any thoughts...">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="col-12 plug-tag">
                                             <div class="row">
-                                                <div class="col-12"><span>Tags</span></div>
+                                                <div class="col-12 mb-1"><span>Tags</span></div>
                                                 <div class="col-12">#GraphicDesign #VideoProduction #Animation</div>
                                             </div>
                                         </div>
@@ -146,6 +158,83 @@
                                         </div>
                                         <div class="col-12 plug-date text-right">Posted on 14th Dec, 2017.</div>
                                         <hr>
+                                    </div>
+                                    <div class="row plug-feedback no-gutters pr-0">
+                                        <i class="fa fa-close" aria-hidden="true"></i>
+                                        <div style="overflow-y: scroll; height: 300px; width: 100%">
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 p-0">
+                                                <div class="media">
+                                                    <img class="align-self-center mr-2" src="images/user.png" alt="Generic placeholder image">
+                                                    <div class="media-body mt-1">
+                                                        <a href="#" class="name">Adewale Obi</a>
+                                                        <a href="#" class="desc">Fashion Designer</a>
+                                                    </div>
+                                                </div>
+                                                <p>Awesome job... would like to work with you</p>
+                                                <span class="fd-time">5 Days ago</span>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 feed">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="col pl-0">
+                                                        <textarea class="form-control-plaintext" id="comment" placeholder="Comment..." rows="2"></textarea>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <a class="btn plug-btn-sm btn-yellow mt-3 mr-2" href="#">Post</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -280,12 +369,12 @@
                                     </div>
                                 </div>
                                 <div class="row p-1-25">
-                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <a href="uploads.html" class="col-sm-6 col-md-4 col-lg-3" style="text-decoration: none">
                                         <div class="plug-card mt-2 mb-3 mx-auto text-center pt-3 add">
                                             <div class="add-sym">+</div>
                                             <div class="add-exp">Upload Content</div>
                                         </div>
-                                    </div>
+                                    </a>
                                     <div class="col-sm-6 col-md-4 col-lg-3">
                                         <div class="plug-card mt-2 mb-3 mx-auto" data-toggle="modal" data-target="#plugModal">
                                             <div class="plug-caption px-2 py-1">
@@ -508,7 +597,7 @@
                                                 <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
                                                 <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
                                                     <img src="images/user.png"/>
@@ -523,7 +612,7 @@
                                                 <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
                                                 <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
                                                     <img src="images/user.png"/>
@@ -538,7 +627,7 @@
                                                 <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
                                                 <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
                                                     <img src="images/user.png"/>
@@ -553,7 +642,7 @@
                                                 <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
                                                 <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
                                                     <img src="images/user.png"/>
@@ -568,7 +657,7 @@
                                                 <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
                                                 <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
                                                     <img src="images/user.png"/>
@@ -583,7 +672,7 @@
                                                 <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
                                                 <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
                                                     <img src="images/user.png"/>
@@ -624,12 +713,12 @@
                                             <div class="add-exp">Upload Opportunity</div>
                                         </a>
                                         <hr>
-                                        <a class="no-decor" href="op_available.html">
+                                        <a class="no-decor" href="op_uploaded.html">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
                                                 <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
                                                     <img src="images/available.png"/>
@@ -637,7 +726,7 @@
                                             </div>
                                         </a>
                                         <hr>
-                                        <a class="no-decor" href="op_available.html">
+                                        <a class="no-decor" href="op_uploaded.html">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
                                                     <img src="images/user.png"/>
@@ -647,15 +736,15 @@
                                                 <div class="col-12 col-lg-7 mt-2 mt-lg-0 op-desc text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 align-self-center op-status text-center text-lg-right">
                                                     <img src="images/pending.png"/>
                                                 </div>
                                             </div>
                                         </a>
                                         <hr>
-                                        <a class="no-decor" href="op_available.html">
+                                        <a class="no-decor" href="op_uploaded.html">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
                                                     <img src="images/user.png"/>
@@ -673,15 +762,15 @@
                                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                                     </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 align-self-center op-status text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
                                         </a>
                                         <hr>
-                                        <a class="no-decor" href="op_available.html">
+                                        <a class="no-decor" href="op_uploaded.html">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
                                                     <img src="images/user.png"/>
@@ -699,15 +788,15 @@
                                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                                     </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 align-self-center op-status text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
                                         </a>
                                         <hr>
-                                        <a class="no-decor" href="op_available.html">
+                                        <a class="no-decor" href="op_uploaded.html">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
                                                     <img src="images/user.png"/>
@@ -725,15 +814,15 @@
                                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                                     </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
                                         </a>
                                         <hr>
-                                        <a class="no-decor" href="op_available.html">
+                                        <a class="no-decor" href="op_uploaded.html">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-lg-2 op-uploader text-center text-lg-left">
                                                     <img src="images/user.png"/>
@@ -751,9 +840,9 @@
                                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                                     </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
@@ -911,22 +1000,9 @@
                                                 <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
                                                     <span class="op-name">Bill board Advert</span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
-                                                    <img src="images/pending.png"/>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                        <a class="no-decor" href="op_achieved.html">
-                                            <div class="row no-gutters">
-                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
-                                                    <span class="op-name">Bill board Advert</span>
-                                                    <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
-                                                </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
                                                     <img src="images/pending.png"/>
                                                 </div>
                                             </div>
@@ -945,9 +1021,9 @@
                                                             <i class="fa fa-star-o" aria-hidden="true"></i>
                                                         </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
@@ -966,9 +1042,9 @@
                                                             <i class="fa fa-star-o" aria-hidden="true"></i>
                                                         </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
@@ -987,9 +1063,9 @@
                                                             <i class="fa fa-star-o" aria-hidden="true"></i>
                                                         </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
@@ -1008,9 +1084,30 @@
                                                             <i class="fa fa-star-o" aria-hidden="true"></i>
                                                         </span>
                                                     <span class="op-location">Lagos, Nigeria</span>
-                                                    <span class="op-time">5 days ago | Full Time</span>
+                                                    <span class="op-time">5 days ago</span>
                                                 </div>
-                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status text-center text-lg-right">
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
+                                                    <img src="images/done.png"/>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <hr>
+                                        <a class="no-decor" href="op_achieved.html">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 col-lg-9 op-desc align-self-center text-center text-lg-left">
+                                                    <span class="op-name">Bill board Advert</span>
+                                                    <span class="op-comment"><span>Comment:</span> Awesome job, looking forward to future collaborations...</span>
+                                                    <span class="op-rating">
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </span>
+                                                    <span class="op-location">Lagos, Nigeria</span>
+                                                    <span class="op-time">5 days ago</span>
+                                                </div>
+                                                <div class="col-12 col-lg-3 mt-2 mt-lg-0 op-status align-self-center text-center text-lg-right">
                                                     <img src="images/done.png"/>
                                                 </div>
                                             </div>
@@ -1163,10 +1260,158 @@
                                 </nav>
                                 <div class="tab-content" id="wTab-content">
                                     <div class="tab-pane fade show active" id="w-payment" role="tabpanel" aria-labelledby="wPay-tab">
-                                        This section provides wallet payment history
+                                        <!-- This section provides wallet payment history -->
+                                        <div class="row mt-0 mt-lg-3">
+                                            <div class="col-12 col-lg-6 text-center my-2 my-lg-0 purple pt-1">
+                                                Account Balance: &#8358 180,000.00
+                                            </div>
+                                            <div class="col-12 col-lg-6 text-center">
+                                                <a href="#" class="btn btn-yellow plug-btn-sm my-2 my-lg-0 mr-4">Fund Wallet</a>
+                                                <a href="#" class="btn btn-yellow plug-btn-sm my-2 my-lg-0">Request Withdrawal</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 mt-3 mt-lg-5">
+                                                <h5 class="text-center mb-0">History</h5>
+                                                <hr style="width: 60%;">
+                                                <a class="no-decor" href="op_available.html">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
+                                                            <span class="op-name">Bill board Advert</span>
+                                                            <span class="op-location dr">&#8358 180,000.00</span>
+                                                            <span class="op-time">Wallet Debit</span>
+                                                        </div>
+                                                        <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
+                                                            <img src="images/user.png"/>
+                                                            <span class="up-name">Pyramid Inc.</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a class="no-decor" href="op_available.html">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
+                                                            <span class="op-name">Bill board Advert</span>
+                                                            <span class="op-location cr">&#8358 180,000.00</span>
+                                                            <span class="op-time">Wallet Credit</span>
+                                                        </div>
+                                                        <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
+                                                            <img src="images/user.png"/>
+                                                            <span class="up-name">Pyramid Inc.</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a class="no-decor" href="op_available.html">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
+                                                            <span class="op-name">Bill board Advert</span>
+                                                            <span class="op-location dr">&#8358 180,000.00</span>
+                                                            <span class="op-time">Wallet Debit</span>
+                                                        </div>
+                                                        <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
+                                                            <img src="images/user.png"/>
+                                                            <span class="up-name">Pyramid Inc.</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a class="no-decor" href="op_available.html">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
+                                                            <span class="op-name">Bill board Advert</span>
+                                                            <span class="op-location cr">&#8358 180,000.00</span>
+                                                            <span class="op-time">Wallet Credit</span>
+                                                        </div>
+                                                        <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
+                                                            <img src="images/user.png"/>
+                                                            <span class="up-name">Pyramid Inc.</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <a class="no-decor" href="op_available.html">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
+                                                            <span class="op-name">Bill board Advert</span>
+                                                            <span class="op-location cr">&#8358 180,000.00</span>
+                                                            <span class="op-time">Wallet Debit</span>
+                                                        </div>
+                                                        <div class="col-12 col-lg-3 op-uploader order-1 order-lg-2 text-center text-lg-right">
+                                                            <img src="images/user.png"/>
+                                                            <span class="up-name">Pyramid Inc.</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination justify-content-end px-3 mb-0">
+                                                                <li class="page-item disabled">
+                                                                    <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
+                                                                        <span aria-hidden="true"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+                                                                        <span class="sr-only">Previous</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">...</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                                                        <span class="sr-only">Next</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="tab-pane fade" id="w-setting" role="tabpanel" aria-labelledby="wSet-tab">
-                                        This section provides wallet settings
+                                       <!-- This section provides wallet settings -->
+                                        <div class="row">
+                                            <div class="col-12 col-lg-10 mx-auto purple text-center s-0875">
+                                                <h6 class="h6">NOTICE!!</h6>
+                                                For Security reasons, account name cannot be changed once saved, and also transactions
+                                                cannot commence on PlugMe until accounts are verified.
+                                            </div>
+                                            <div class="col-12 col-lg-10 mx-auto mt-3">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="wId">Wallet ID</label>
+                                                        <input type="text" class="form-control" id="wId" value="1gudkafu2332" readonly>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="acctName">Account Name</label>
+                                                        <input type="text" class="form-control" id="acctName" placeholder="As it apears with the Bank">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="acctNum">Account Number</label>
+                                                        <input type="text" class="form-control" id="acctNum" placeholder="0000000000">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="bnk">Bank</label>
+                                                        <select id="bnk" class="form-control">
+                                                            <option selected>Select your accounts Bank</option>
+                                                            <option>Access Bank</option>
+                                                            <option>GTBank</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="text-center mt-4 mb-5">
+                                                        <a href="#" class="btn btn-yellow plug-btn">Save Account</a>
+                                                    </div>
+                                                </form>
+                                                <div class="up-discliamer text-center">
+                                                    By clicking <span class="link-yellow">'Save Account',</span> you agree to the
+                                                    <span class="mobile-tab-name"> Terms & Conditions</span> and
+                                                    <span class="mobile-tab-name">Privacy Policy.</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -4,14 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>PlugMe | User Profile - Opportunity Achieved</title>
+    <title>PlugMe | Memorandum of Understanding</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="overflow-x: hidden;">
-    <!-- Navigation with Search accross all viewports -->
+    <!-- Navigation with Search across all viewports -->
     <nav class="navbar fixed-top">
         <a href="index.html" class="plugme-logo"><img src="images/logo.png" height="40"/></a>
         <div class="input-group input-group-sm ml-auto mr-0 mx-md-auto">
@@ -20,19 +20,182 @@
                     </span>
             <input type="text" class="form-control" placeholder="Plug Me to..." aria-label="Plug Me to...">
         </div>
-        <a href="#" class="sign d-none d-md-block"><img src="images/sign_up.png"/> Sign <span>Up</span></a>
-        <a href="logged_in.html" class="sign d-none d-md-block"><img src="images/sign_in.png"/> Sign <span>In</span></a>
+        <div class="dropdown show">
+            <a class="sign d-none d-md-block dropdown-toggle" href="#" role="button" id="dropdownNote" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/notification.png"/>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownNote">
+                <h5>Recent</h5>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            posted a content
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            commented on your content
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            liked your content
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            is now a fan of yours
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+            </div>
+            <div class="red-counter d-none d-md-block text-center">54</div>
+        </div>
+        <div class="dropdown show">
+            <a class="sign d-none d-md-block dropdown-toggle" href="#" role="button" id="dropdownMsg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/massage.png"/>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMsg">
+                <h5>Recent</h5>
+                <a href="#" class="btn btn-yellow plug-btn">+</a>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            messaged you
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            messaged you
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            messaged you
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#">
+                    <div class="row">
+                        <div class="col-4 pr-1">
+                            <div class="media">
+                                <img class="align-self-center mr-1" src="images/user.png" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <span class="drop-name">Adewale</span>
+                                    <span class="drop-desc">Fashion Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 pl-1">
+                            messaged you
+                            <span class="drop-time">5 days ago</span>
+                        </div>
+                    </div>
+                </a>
+                <hr>
+            </div>
+            <div class="red-counter d-none d-md-block text-center">12</div>
+        </div>
+        <a href="#" class="sign d-none d-md-block"><span>John</span>&nbsp;&nbsp;<img src="images/profile.png"/></a>
     </nav>
     <!-- Side Navigation Menu on Small Viewports -->
     <nav class="nav flex-column side-nav text-center d-md-none">
-        <a class="nav-link menu-tab" href="#">Trending</a>
-        <a class="nav-link menu-tab" href="#">Gallery</a>
-        <a class="nav-link menu-tab" href="#">Opportunities</a>
-        <a class="nav-link menu-tab" href="#">Blog</a>
-        <a class="nav-link menu-tab" href="#">About Us</a>
+        <a class="nav-link menu-tab" href="#trend">Trending</a>
+        <a class="nav-link menu-tab" href="#gallery">Gallery</a>
+        <a class="nav-link menu-tab" href="#opp">Opportunities</a>
+        <a class="nav-link menu-tab" href="#blog">Blog</a>
+        <a class="nav-link menu-tab" href="#about">About Us</a>
         <hr>
-        <a class="nav-link" href="#">Sign Up</a>
-        <a class="nav-link" href="logged_in.html">Sign In</a>
+        <a class="nav-link" href="">Notification</a>
+        <a class="nav-link" href="">Message</a>
+        <a class="nav-link" href="">John Doe</a>
     </nav>
     <!-- Advertisement Banner across all viewports -->
     <div class="container-fluid Ads">
@@ -74,13 +237,14 @@
     </nav>
     <!-- Application Navigation for Medium to Extra large Viewports -->
     <nav class="nav nav-justified px-0 px-lg-3 d-none d-md-flex" id="plugMe-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-trend" data-toggle="tab" href="#trend" role="tab" aria-controls="trend" aria-selected="true">Trending</a>
+        <a class="nav-item nav-link" id="nav-trend" data-toggle="tab" href="#trend" role="tab" aria-controls="trend" aria-selected="true">Trending</a>
         <a class="nav-item nav-link" id="nav-gallery" data-toggle="tab" href="#gallery" role="tab" aria-controls="gallery" aria-selected="true">Gallery</a>
         <a class="nav-item nav-link" id="nav-opp" data-toggle="tab" href="#opp" role="tab" aria-controls="opp" aria-selected="true">Opportunities</a>
         <a class="nav-item nav-link" id="nav-blog" data-toggle="tab" href="#blog" role="tab" aria-controls="blog" aria-selected="true">Blog</a>
         <a class="nav-item nav-link" id="nav-about" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About Us</a>
         <a class="nav-item nav-link ml-3 ml-lg-5" href="#"><img src="images/refresh.png" class="mb-1" height="15"/> Refresh</a>
     </nav>
+    <!-- Main Body of Application -->
     <div class="container-fluid main-page">
         <!-- User Bio and Plug collection -->
         <div class="container py-4">
@@ -88,14 +252,13 @@
             <nav class="nav justify-content-center pb-2" id="profileTab" role="tablist">
                 <a class="nav-item nav-link" id="portfolio-tab" data-toggle="tab" href="#" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
                 <a class="nav-item nav-link" id="opportunity-tab" data-toggle="tab" href="#" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
-                <a class="nav-item nav-link active" id="achievement-tab" data-toggle="tab" href="#" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
+                <a class="nav-item nav-link" id="achievement-tab" data-toggle="tab" href="#" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
                 <a class="nav-item nav-link" id="wallet-tab" data-toggle="tab" href="#" role="tab" aria-controls="wallet" aria-selected="false">Wallet</a>
             </nav>
             <div class="row pb-3">
                 <!-- Describes Navigation history -->
                 <div class="col-12 page-navigation pb-2">
-                    Profile&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Achievements&nbsp;&nbsp;
-                    <span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Bill board Advert</span>
+                    Profile&nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;MoU</span>
                 </div>
                 <!-- User Bio -->
                 <div class="col-md-4 px-2">
@@ -200,24 +363,41 @@
                 </div>
                 <!-- Opportunity Gallery -->
                 <div class="col-md-8 px-2 mt-4 mt-md-0">
-                    <div class="bio-opportunity">
-                        <!-- Opportunity Profile -->
-                        <div class="row p-1-25">
-                            <!-- Opportunity Header with name, location and status -->
-                            <div class="col-12 col-md-9 text-center text-md-left align-self-center">
-                                <span class="op-name">Bill board Advert</span>
-                                <span class="op-location"><img src="images/marker.png"/> Lagos, Nigeria</span>
-                            </div>
-                            <div class="col-12 col-md-3 ach-status text-center text-md-right">
-                                <img src="images/pending.png"/>
-                            </div>
-                            <div class="col-12"><hr></div>
-                            <!-- Other Opportunity Information -->
+                    <div class="bio-msg p-1-25">
+                        <!-- Message Header, with recipients name and status-->
+                        <div class="row">
                             <div class="col-12">
-                                <!-- Position Information -->
+                                <h5 class="text-center d-none d-lg-block mb-0">Memorandum of Understanding</h5>
+                                <h6 class="text-center d-block d-lg-none mb-0">Memorandum of Understanding</h6>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="media mb-3 mb-md-0 mb-lg-3 px-lg-3">
+                                    <img class="align-self-end bio-img mx-auto pr-3 pr-md-0 pr-lg-3" src="images/user.png" alt="Generic placeholder image">
+                                    <div class="media-body d-md-none d-lg-flex">
+                                        <div class="bio-info text-md-center text-lg-left mt-2">
+                                            <a href="#" class="name">Adewale</a><br>
+                                            <a href="#" class="desc">Fashion Designer</a><br>
+                                            <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-none d-md-block d-lg-none mb-md-3">
+                                <div class="bio-info text-md-center text-lg-left mt-2">
+                                    <a href="#" class="name">Adewale</a><br>
+                                    <a href="#" class="desc">Fashion Designer</a><br>
+                                    <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
+                                </div>
+                            </div>
+                            <!-- Job Information -->
+                            <div class="col-12">
+                                <!-- Job Title Information -->
                                 <p class="px-lg-3">
-                                    <span class="op-profile-desc">Position Needed</span>
-                                    <span class="op-profile-value">Graphic Designer / Vector Illustrator</span>
+                                    <span class="op-profile-desc">Job Title</span>
+                                    <span class="op-profile-value">Graphic Design of Anime Characters</span>
                                 </p>
                                 <!-- Responsibilities Information -->
                                 <p class="px-lg-3">
@@ -230,15 +410,12 @@
                                         publication.
                                     </span>
                                 </p>
-                                <!-- Professional Information -->
+                                <!-- Output Specification -->
                                 <p class="px-lg-3">
-                                    <span class="op-profile-desc">Professional Direction</span>
-                                    <span class="op-profile-value">Bill board Advertisement</span>
-                                </p>
-                                <!-- Tag Information -->
-                                <p class="px-lg-3">
-                                    <span class="op-profile-desc">Tags</span>
-                                    <span class="op-profile-value">#GraphicDesign #Animation</span>
+                                    <span class="op-profile-desc">Deliverables</span>
+                                    <span class="op-profile-value">
+                                        <textarea class="form-control-plaintext" id="msg" placeholder="Specification of the final product you're expecting..." rows="3"></textarea>
+                                    </span>
                                 </p>
                                 <!-- Budget Information -->
                                 <p class="px-lg-3">
@@ -250,46 +427,11 @@
                                     <span class="op-profile-desc">Deadline</span>
                                     <span class="op-profile-value">12th January, 2017.</span>
                                 </p>
-                                <!-- Reviews Collapse Button -->
-                                <p class="px-lg-3 pb-3 mt-5 mb-0 text-center">
-                                    <a class="btn btn-yellow plug-btn" data-toggle="collapse" href="#ach-review" aria-expanded="false" aria-controls="ach_review">Reviews&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                                </p>
-                                <div class="px-lg-3 collapse" id="ach-review">
-                                    <hr>
-                                    <div class="card card-body">
-                                        <div class="media mb-3 mb-md-0 mb-lg-3">
-                                            <img class="align-self-end bio-img mx-auto pr-3 pr-md-0 pr-lg-3" src="images/user.png" alt="Generic placeholder image">
-                                            <div class="media-body d-md-none d-lg-flex">
-                                                <div class="bio-info text-md-center text-lg-left mt-2">
-                                                    <a href="#" class="name">John Doe</a><br>
-                                                    <a href="#" class="desc">Graphic Designer</a><br>
-                                                    <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-none d-md-block d-lg-none mb-md-3">
-                                            <div class="bio-info text-md-center text-lg-left mt-2">
-                                                <a href="#" class="name">John Doe</a><br>
-                                                <a href="#" class="desc">Graphic Designer</a><br>
-                                                <a href="#" class="location"><img src="images/marker.png"/> Lagos, Nigeria</a><br>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <span class="op-profile-desc">Comment</span>
-                                            <span class="op-profile-value">Awesome job, looking forward to future collaborations...</span>
-                                        </p>
-                                        <p>
-                                            <span class="op-profile-desc">Rating</span>
-                                            <span class="op-profile-value">
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-12 text-center mt-3 mb-4">
+                                <a href="#" class="btn btn-yellow plug-btn my-2 my-lg-0 mr-4">Accept</a>
+                                <a href="#" class="btn btn-yellow plug-btn my-2 my-lg-0">Decline</a>
                             </div>
                         </div>
                     </div>
@@ -307,8 +449,8 @@
                     <div class="input-group input-group-sm">
                         <input type="text" class="form-control" placeholder="Email" aria-label="Email">
                         <span class="input-group-btn">
-                                <button class="btn" type="button">Subscribe</button>
-                              </span>
+                            <button class="btn" type="button">Subscribe</button>
+                        </span>
                     </div>
                 </div>
                 <div class="col-10 col-md-6">

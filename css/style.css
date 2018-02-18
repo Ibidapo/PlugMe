@@ -124,16 +124,20 @@ nav.navbar .input-group-sm>.input-group-btn>.btn:hover, footer .input-group-sm>.
 .Ads {
     margin-top: 56px;
 }
-#Ads-Banner, .carousel-inner, .carousel-item {
+#Ads-Banner, #Ads-Banner .carousel-inner, #Ads-Banner .carousel-item {
     height: 225px;
     overflow: hidden;
 }
-#Ads-Banner .carousel-inner .carousel-item img {
+#Ads-Banner .carousel-item img, #entryGallery .carousel-item img {
     object-fit: cover;
-    height: auto;
+    height: 100%;
+    width: 100%;
 }
 #Ads-Banner .carousel-control-next, #Ads-Banner .carousel-control-prev {
     width: 5%;
+}
+#entryGallery, #entryGallery .carousel-inner, #entryGallery .carousel-item {
+    height: 100%;
 }
 
 /*Styling for Content Area Navbar*/
@@ -261,7 +265,8 @@ nav#mobile-plugMe-tab {
     background-size: cover;
 }
 .page-header h3, .page-header h4, .op-name, .up-name, .plug-view-card .plugger-info .view-plugger-name, .plug-tag span,
-.plugger-bio .bio-info .name, #about .caption, #about h6, .bio-gallery label, .bio-opportunity label {
+.plugger-bio .bio-info .name, #about .caption, #about h6, .bio-gallery label, .bio-opportunity label, .card-body .bio-info .name,
+.bio-msg h5, .bio-msg h6, .bio-msg .bio-info .name {
     color: #5d3c9c;
     font-weight: 500;
 }
@@ -296,18 +301,19 @@ nav#mobile-plugMe-tab {
 }
 .plug-name, .plugger-bio .bio-rating, .plugger-bio .bio-header, .plug-metrics .icon, .plug-date, #opportunityTab .nav-lnk,
 #addContentTab .nav-link, #walletTab .nav-link, .op-profile-desc, .op-comment span, .sign-cnt, .sign-ads, .sign-ads .link-yellow,
-.sign-caption .hd, #about figure h5, nav.navbar .dropdown-menu h5, .drop-name, .plug-feedback .media-body .name {
+.sign-caption .hd, #about figure h5, nav.navbar .dropdown-menu h5, .drop-name, .plug-feedback .media-body .name, .card-body .media-body
+.name, #wTab-content h5, .purple h6 {
     font-weight: 500;
 }
 .plug-caption .plug-name, .plug-caption .plug-categories, .plug-caption .opp-plugger-name, .add-sym, nav.navbar .dropdown-menu h5 {
     color:  #cfd0d1;
     text-decoration: none;
 }
-.plug-caption .plug-details, .bio-opportunity .plug-card .plug-caption .plug-name, .plug-info .input-group-prepend {
+.plug-caption .plug-details, .bio-opportunity .plug-card .plug-caption .plug-name, .plug-info .input-group-prepend, .op-uploader {
     line-height: 1.25;
 }
 .plug-caption .plugger-name, .plug-caption .achiever-desc, .page-navigation, .op-location, .up-desc, .op-comment, .sign-cnt,
-.plug-btn-sm, #fdbk-trigger {
+.plug-btn-sm, #fdbk-trigger, .op-rating {
     font-size: 0.75rem;
 }
 .plug-caption .plug-categories, .plug-caption .opp-plugger-name, .plugger-bio .bio-member{
@@ -316,19 +322,19 @@ nav#mobile-plugMe-tab {
     line-height: 1.125;
 }
 .plug-caption hr, .plug-view-card hr, .plugger-bio hr, nav.navbar .dropdown-menu hr, .bio-opportunity hr, .bio-achievement hr,
-.bio-msg hr, .plug-feedback hr {
+.bio-msg hr, .plug-feedback hr, #wTab-content hr {
     background-image: radial-gradient(#cfd0d1 20%, transparent 100%);
 }
 .plug-caption.active hr {
     background-image: radial-gradient(#737477 20%, transparent 100%);
 }
 .plug-caption hr, .plug-caption.active hr, .plug-view-card hr, .plugger-bio hr, nav.navbar .dropdown-menu hr, .bio-opportunity hr,
-.bio-achievement hr, .bio-msg hr, .plug-feedback hr {
+.bio-achievement hr, .bio-msg hr, .plug-feedback hr, #wTab-content hr {
     border: 0 !important;
     border-radius: 50%;
 }
 .plug-caption hr, .plug-view-card hr, .plugger-bio hr, nav.navbar .dropdown-menu hr, .plug-caption.active hr, .bio-opportunity hr,
-.bio-achievement hr, .bio-msg hr, .plug-feedback hr {
+.bio-achievement hr, .bio-msg hr, .plug-feedback hr, #wTab-content hr {
     height: 0.075rem;
 }
 .plug-caption hr {
@@ -344,7 +350,8 @@ nav#mobile-plugMe-tab {
     max-height: 135px;
 }
 .plug-caption.active a.plug-name, .plugger-bio .bio-rating, .op-profile-desc, .plug-view-card .plugger-info .view-plugger-desc,
-.plug-metrics, .plug-tag, .plugger-bio .bio-info .desc, .up-desc,#about .intro, #about p, #about .my-5 span, .add-exp {
+.plug-metrics, .plug-tag, .plugger-bio .bio-info .desc, .up-desc,#about .intro, #about p, #about .my-5 span, .add-exp, .card-body
+.bio-info .desc, .purple, .bio-msg .bio-info .desc {
     color: #86275d;
 }
 .plug-caption.active .plugger-name, .plug-caption.active .achiever-desc, .plugger-bio .bio-header, .page-navigation .active,
@@ -355,7 +362,7 @@ nav#mobile-plugMe-tab {
 .opp-plugger-name, .plugger-bio .bio-member, .plug-view-card .plugger-info .view-plugger-location, .plug-date, .plugger-bio .location,
 .op-rating, .bio-rating i , .page-navigation, .op-location, .op-time, .op-comment, .op-profile-value, #plugMe-tab .nav-link,
 #profileTab .nav-link, .plugger-bio .bio-member, .plug-trends figure figcaption, .up-discliamer, .bio-msg label, .msg-status,
-.plug-feedback, .plug-feedback textarea {
+.plug-feedback, .plug-feedback textarea, .card-body .bio-info .location, #wTab-content h5, .grey, .bio-msg .bio-info .location {
     color: #737477;
 }
 .bio-gallery .plug-card, .bio-opportunity .plug-card {
@@ -366,7 +373,8 @@ nav#mobile-plugMe-tab {
     max-height: 110px;
 }
 .bio-gallery .plug-card .plug-caption .plug-name, .bio-gallery label, .bio-opportunity label, #about p, .bio-gallery .form-control,
-.bio-opportunity .form-control, .bio-opportunity .input-group .form-control, .bio-opportunity .plug-card .plug-caption .plug-name {
+.bio-opportunity .form-control, .bio-opportunity .input-group .form-control, .bio-opportunity .plug-card .plug-caption .plug-name,
+.s-0875, .bio-info .desc{
     font-size: 0.875rem;
 }
 .plug-card .plug-cancel, .plug-card .plug-type {
@@ -464,7 +472,7 @@ nav#mobile-plugMe-tab {
 .plugger-bio .bio-img {
     height: 100px;
 }
-.plugger-bio .bio-info img{
+.plugger-bio .bio-info img, .card-body .bio-info img, .bio-msg .bio-info img{
     height: 1rem;
     vertical-align: text-bottom;
 }
@@ -514,9 +522,6 @@ nav#mobile-plugMe-tab {
 .no-decor {
     text-decoration: none !important;
 }
-.op-status img {
-    height: 100px;
-}
 .bio-opportunity .input-group-prepend, .plug-info .input-group-prepend {
     background-image: linear-gradient(to bottom, #f7f7f7 0%, #bcbaba 100%);
     padding: .375rem .75rem;
@@ -542,9 +547,6 @@ nav#mobile-plugMe-tab {
 }
 
 /*Styling for Profile Page (Wallet Section)*/
-#wTab-content div[role="tabpanel"] {
-    height: 500px;
-}
 .dropzone, .vid-box, .vid-url, input.vid-url:focus {
     border: 1px dashed #73747799;
 }
@@ -575,6 +577,12 @@ input.vid-url:focus {
 }
 input.vid-url:focus, .bio-msg .form-control-plaintext:focus, .plug-feedback textarea:focus {
     outline: none;
+}
+.cr {
+    color: green;
+}
+.dr {
+    color: red;
 }
 
 /*Styling for Achievement Instance*/
@@ -685,26 +693,29 @@ a.link-yellow, a.link-yellow:hover {
 .modal-body .plug-content, .modal-body .plug-info {
     padding: .5rem;
 }
+.modal-body .plug-info, .modal-body .plug-view, .modal-body .plug-view-card, .modal-body .plug-feedback {
+    height: 375px;
+}
 .modal-body .plug-view, .modal-body .plug-view-card, .modal-body .plug-feedback {
     background-color: white;
-    height: 375px;
     border-radius: 1.25rem .25rem 1.25rem .25rem;
 }
 .modal-body .plug-view-card, .modal-body .plug-feedback {
     padding: 1rem;
+    left: 0;
 }
-.modal-body .plug-view-card a, .plugger-bio a, .page-link:focus, .page-link:hover, .modal-body .plug-feedback a {
+.modal-body .plug-view-card a, .plugger-bio a, .page-link:focus, .page-link:hover, .modal-body .plug-feedback a, .bio-info a {
     text-decoration: none;
 }
-.plug-view-card .plugger-img, .op-uploader img {
-    height: 80px;
+.plug-view-card .plugger-img, .op-uploader img, .op-status img, .bio-msg .bio-img, .card-body .bio-img {
+    height: 75px;
 }
 .plug-view-card .plugger-info, .plugger-bio .bio-info, .plugger-bio .bio-edit .btn, .drop-desc, nav.navbar .dropdown-menu .btn,
-.plug-feedback .media-body {
+.plug-feedback .media-body, .card-body .bio-info, .bio-msg .bio-info {
     line-height: 1;
 }
 .plug-view-card .plugger-info .view-plugger-name, .plugger-bio .bio-info .name, #plugMe-tab .nav-link, nav.flex-column.side-nav a,
-.op-name, .sign-caption .hd, #profileTab .nav-link {
+.op-name, .sign-caption .hd, #profileTab .nav-link, .card-body .bio-info .name, .bio-msg .bio-info .name {
     font-size: 1.125rem;
 }
 .plug-view-card .plugger-info .view-plugger-desc, .plug-metrics .value, .op-profile-value, a.link-yellow, .msg-status {
@@ -729,7 +740,7 @@ a.link-yellow, a.link-yellow:hover {
     margin: .5rem auto;
 }
 .plug-metrics .icon, .plug-tag,.plugger-bio .location, .sign-page .form-check-label, .plug-info .input-group, .plug-feedback,
-.plug-feedback .media-body .name {
+.plug-feedback .media-body .name, .card-body .bio-info .location, .bio-msg .bio-info .location {
     font-size: 0.75rem;
 }
 .plug-tag span, .plug-feedback .fa-close {
@@ -769,7 +780,7 @@ a.link-yellow, a.link-yellow:hover {
 .bio-msg .form-control-plaintext, .plug-feedback textarea {
     width: 100%;
 }
-.bio-msg textarea.form-control-plaintext, .plug-feedback textarea {
+.bio-msg textarea.form-control-plaintext, .plug-feedback textarea, .modal-body .plug-view {
     overflow: hidden;
 }
 
@@ -831,10 +842,10 @@ footer nav .nav-link.copyright {
     .plug-view-card .plugger-img {
         height: 65px;
     }
-    .plug-view-card .plugger-info .view-plugger-name, .plugger-bio .bio-info .name {
+    .plug-view-card .plugger-info .view-plugger-name, .plugger-bio .bio-info .name, .card-body .bio-info .name, .bio-msg .bio-info .name {
         font-size: 1rem;
     }
-    .plug-view-card .plugger-info .view-plugger-desc, .plugger-bio .bio-info .desc {
+    .plug-view-card .plugger-info .view-plugger-desc, .plugger-bio .bio-info .desc, .card-body .bio-info .desc, .bio-msg .bio-info .desc {
         font-size: 0.75rem;
     }
     .plug-view-card .plugger-info .view-plugger-location {
