@@ -154,7 +154,7 @@
                                             </div>
                                         </div>
                                         <div class="col-12 plug-like-btn my-2 text-center">
-                                            <a href="#" class="btn plug-btn-sm btn-yellow">Like <img src="images/likes_2.png"/></a>
+                                            <a href="#" class="btn plug-btn-sm bg-yellow">Like <img src="images/likes_2.png"/></a>
                                         </div>
                                         <div class="col-12 plug-date text-right">Posted on 14th Dec, 2017.</div>
                                         <hr>
@@ -230,7 +230,7 @@
                                                         <textarea class="form-control-plaintext" id="comment" placeholder="Comment..." rows="2"></textarea>
                                                     </div>
                                                     <div class="col-auto">
-                                                        <a class="btn plug-btn-sm btn-yellow mt-3 mr-2" href="#">Post</a>
+                                                        <a class="btn plug-btn-sm bg-yellow mt-3 mr-2" href="#">Post</a>
                                                     </div>
                                                 </div>
                                             </form>
@@ -245,13 +245,21 @@
         </div>
         <!-- User Bio and Plug collection -->
         <div class="container py-4">
-            <!-- Profile Tabs -->
-            <nav class="nav justify-content-center pb-2" id="profileTab" role="tablist">
+            <!-- Profile Tabs for Medium and Large devices -->
+            <nav class="nav justify-content-center pb-2  d-none d-md-flex" id="profileTab" role="tablist">
                 <a class="nav-item nav-link active" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
                 <a class="nav-item nav-link" id="opportunity-tab" data-toggle="tab" href="#opportunity" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
                 <a class="nav-item nav-link" id="achievement-tab" data-toggle="tab" href="#achievement" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
                 <a class="nav-item nav-link" id="wallet-tab" data-toggle="tab" href="#wallet" role="tab" aria-controls="wallet" aria-selected="false">Wallet</a>
             </nav>
+            <!-- Profile Tabs for Small devices -->
+            <select class="form-control form-control-sm d-md-none mx-auto my-3" id="m-profileTab">
+                <option value="0" selected>Portfolio</option>
+                <option value="1">Opportunity</option>
+                <option value="2">Achievement</option>
+                <option value="3">Wallet</option>
+            </select>
+            <!-- Tab Content holding information for various tabs -->
             <div class="tab-content" id="profileTab-content">
                 <div class="tab-pane fade show active" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
                     <div class="row pb-3">
@@ -260,8 +268,8 @@
                             Profile&nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Portfolio</span>
                         </div>
                         <!-- User Bio -->
-                        <div class="col-md-4 px-2">
-                            <div class="row plugger-bio no-gutters">
+                        <div class="col-12 col-md-4 px-2 mt-4 mt-md-0 order-2 order-md-1">
+                            <div class="row plugger-bio no-gutters mx-auto">
                                 <!-- Msg images appear when looking at a third parties profile -->
                                 <div class="col-12">
                                     <div class="media">
@@ -353,7 +361,7 @@
                                 <hr>
                                 <!-- The Edit button is visible only when account owner, is view own account -->
                                 <div class="col-12 bio-edit text-center mb-3">
-                                    <a href="#" class="btn btn-yellow plug-btn">Edit Profile</a>
+                                    <a href="#" class="btn bg-yellow plug-btn">Edit Profile</a>
                                 </div>
                                 <div class="col-12 bio-member text-center">
                                     MEMBER SINCE: NOVEMBER 17, 2017.
@@ -361,7 +369,7 @@
                             </div>
                         </div>
                         <!-- User Content Gallery -->
-                        <div class="col-md-8 px-2 mt-4 mt-md-0">
+                        <div class="col-12 col-md-8 px-2 order-1 order-md-2">
                             <div class="bio-gallery">
                                 <div class="row no-gutters counter">
                                     <div class="col-12 py-2 text-center">
@@ -482,8 +490,8 @@
                             Profile&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Opportunities&nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Available</span>
                         </div>
                         <!-- User Bio -->
-                        <div class="col-md-4 px-2">
-                            <div class="row plugger-bio no-gutters">
+                        <div class="col-12 col-md-4 px-2 mt-4 mt-md-0 order-2 order-md-1">
+                            <div class="row plugger-bio no-gutters mx-auto">
                                 <!-- Msg images appear when looking at a third parties profile -->
                                 <div class="col-12">
                                     <div class="media">
@@ -575,7 +583,7 @@
                                 <hr>
                                 <!-- The Edit button is visible only when account owner, is view own account -->
                                 <div class="col-12 bio-edit text-center mb-3">
-                                    <a href="#" class="btn btn-yellow plug-btn">Edit Profile</a>
+                                    <a href="#" class="btn bg-yellow plug-btn">Edit Profile</a>
                                 </div>
                                 <div class="col-12 bio-member text-center">
                                     MEMBER SINCE: NOVEMBER 17, 2017.
@@ -583,7 +591,7 @@
                             </div>
                         </div>
                         <!-- User Opportunity Gallery -->
-                        <div class="col-md-8 px-2 mt-4 mt-md-0">
+                        <div class="col-12 col-md-8 px-2 order-1 order-md-2">
                             <div class="bio-opportunity">
                                 <!-- Available and Uploaded Opportunities in tabs -->
                                 <nav class="nav nav-justified" id="opportunityTab" role="tablist">
@@ -885,8 +893,8 @@
                             Profile&nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Achievements</span>
                         </div>
                         <!-- User Bio -->
-                        <div class="col-md-4 px-2">
-                            <div class="row plugger-bio no-gutters">
+                        <div class="col-12 col-md-4 px-2 mt-4 mt-md-0 order-2 order-md-1">
+                            <div class="row plugger-bio no-gutters mx-auto">
                                 <!-- Msg images appear when looking at a third parties profile -->
                                 <div class="col-12">
                                     <div class="media">
@@ -978,7 +986,7 @@
                                 <hr>
                                 <!-- The Edit button is visible only when account owner, is view own account -->
                                 <div class="col-12 bio-edit text-center mb-3">
-                                    <a href="#" class="btn btn-yellow plug-btn">Edit Profile</a>
+                                    <a href="#" class="btn bg-yellow plug-btn">Edit Profile</a>
                                 </div>
                                 <div class="col-12 bio-member text-center">
                                     MEMBER SINCE: NOVEMBER 17, 2017.
@@ -986,7 +994,7 @@
                             </div>
                         </div>
                         <!-- User Achievement Gallery -->
-                        <div class="col-md-8 px-2 mt-4 mt-md-0">
+                        <div class="col-12 col-md-8 px-2 order-1 order-md-2">
                             <div class="bio-achievement">
                                 <div class="row no-gutters counter">
                                     <div class="col-12 py-2 text-center">
@@ -1150,8 +1158,8 @@
                             Profile&nbsp;&nbsp;<span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Wallet</span>
                         </div>
                         <!-- User Bio -->
-                        <div class="col-md-4 px-2">
-                            <div class="row plugger-bio no-gutters">
+                        <div class="col-12 col-md-4 px-2 mt-4 mt-md-0 order-2 order-md-1">
+                            <div class="row plugger-bio no-gutters mx-auto">
                                 <!-- Msg images appear when looking at a third parties profile -->
                                 <div class="col-12">
                                     <div class="media">
@@ -1243,7 +1251,7 @@
                                 <hr>
                                 <!-- The Edit button is visible only when account owner, is view own account -->
                                 <div class="col-12 bio-edit text-center mb-3">
-                                    <a href="#" class="btn btn-yellow plug-btn">Edit Profile</a>
+                                    <a href="#" class="btn bg-yellow plug-btn">Edit Profile</a>
                                 </div>
                                 <div class="col-12 bio-member text-center">
                                     MEMBER SINCE: NOVEMBER 17, 2017.
@@ -1251,7 +1259,7 @@
                             </div>
                         </div>
                         <!-- User Achievement Gallery -->
-                        <div class="col-md-8 px-2 mt-4 mt-md-0">
+                        <div class="col-12 col-md-8 px-2 order-1 order-md-2">
                             <div class="bio-gallery">
                                 <!-- Available and Uploaded Opportunities in tabs -->
                                 <nav class="nav nav-justified" id="walletTab" role="tablist">
@@ -1262,19 +1270,20 @@
                                     <div class="tab-pane fade show active" id="w-payment" role="tabpanel" aria-labelledby="wPay-tab">
                                         <!-- This section provides wallet payment history -->
                                         <div class="row mt-0 mt-lg-3">
-                                            <div class="col-12 col-lg-6 text-center my-2 my-lg-0 purple pt-1">
+                                            <div class="col-12 text-center my-2 my-lg-0 magenta align-self-center">
                                                 Account Balance: &#8358 180,000.00
                                             </div>
-                                            <div class="col-12 col-lg-6 text-center">
-                                                <a href="#" class="btn btn-yellow plug-btn-sm my-2 my-lg-0 mr-4">Fund Wallet</a>
-                                                <a href="#" class="btn btn-yellow plug-btn-sm my-2 my-lg-0">Request Withdrawal</a>
+                                            <div class="col-12 text-center mt-0 mt-lg-2">
+                                                <a href="#" class="btn bg-yellow plug-btn-sm my-2 my-lg-0 mr-3">Fund Wallet</a>
+                                                <a href="#" class="btn bg-yellow plug-btn-sm my-2 my-lg-0 mr-3">Withdraw Funds</a>
+                                                <a href="#" class="btn bg-yellow plug-btn-sm my-2 my-lg-0">Issue Invoice</a>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-12 mt-3 mt-lg-5">
                                                 <h5 class="text-center mb-0">History</h5>
                                                 <hr style="width: 60%;">
-                                                <a class="no-decor" href="op_available.html">
+                                                <a class="no-decor" href="mou.html">
                                                     <div class="row no-gutters">
                                                         <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
                                                             <span class="op-name">Bill board Advert</span>
@@ -1288,7 +1297,7 @@
                                                     </div>
                                                 </a>
                                                 <hr>
-                                                <a class="no-decor" href="op_available.html">
+                                                <a class="no-decor" href="mou.html">
                                                     <div class="row no-gutters">
                                                         <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
                                                             <span class="op-name">Bill board Advert</span>
@@ -1302,7 +1311,7 @@
                                                     </div>
                                                 </a>
                                                 <hr>
-                                                <a class="no-decor" href="op_available.html">
+                                                <a class="no-decor" href="mou.html">
                                                     <div class="row no-gutters">
                                                         <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
                                                             <span class="op-name">Bill board Advert</span>
@@ -1316,7 +1325,7 @@
                                                     </div>
                                                 </a>
                                                 <hr>
-                                                <a class="no-decor" href="op_available.html">
+                                                <a class="no-decor" href="mou.html">
                                                     <div class="row no-gutters">
                                                         <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
                                                             <span class="op-name">Bill board Advert</span>
@@ -1330,7 +1339,7 @@
                                                     </div>
                                                 </a>
                                                 <hr>
-                                                <a class="no-decor" href="op_available.html">
+                                                <a class="no-decor" href="mou.html">
                                                     <div class="row no-gutters">
                                                         <div class="col-12 col-lg-9 op-desc align-self-center order-2 order-lg-1 mt-1 mt-lg-0 text-center text-lg-left">
                                                             <span class="op-name">Bill board Advert</span>
@@ -1374,7 +1383,7 @@
                                     <div class="tab-pane fade" id="w-setting" role="tabpanel" aria-labelledby="wSet-tab">
                                        <!-- This section provides wallet settings -->
                                         <div class="row">
-                                            <div class="col-12 col-lg-10 mx-auto purple text-center s-0875">
+                                            <div class="col-12 col-lg-10 mx-auto magenta text-center s-0875">
                                                 <h6 class="h6">NOTICE!!</h6>
                                                 For Security reasons, account name cannot be changed once saved, and also transactions
                                                 cannot commence on PlugMe until accounts are verified.
@@ -1402,7 +1411,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="text-center mt-4 mb-5">
-                                                        <a href="#" class="btn btn-yellow plug-btn">Save Account</a>
+                                                        <a href="#" class="btn bg-yellow plug-btn">Save</a>
                                                     </div>
                                                 </form>
                                                 <div class="up-discliamer text-center">
@@ -1463,5 +1472,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+    <script>
+        $("#m-profileTab").change(function () {
+            var i = $(this).val();
+
+            if (i == 0) {
+                $('a[href="#portfolio"]').tab('show');
+            } else if (i == 1) {
+                $('a[href="#opportunity"]').tab('show');
+            } else if (i == 2) {
+                $('a[href="#achievement"]').tab('show');
+            } else if (i == 3) {
+                $('a[href="#wallet"]').tab('show');
+            }
+        });
+    </script>
 </body>
 </html>

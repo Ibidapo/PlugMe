@@ -84,13 +84,20 @@
     <div class="container-fluid main-page">
         <!-- User Bio and Plug collection -->
         <div class="container py-4">
-            <!-- Profile Tabs -->
-            <nav class="nav justify-content-center pb-2" id="profileTab" role="tablist">
+            <!-- Profile Tabs for Medium and Large devices -->
+            <nav class="nav justify-content-center pb-2 d-none d-md-flex" id="profileTab" role="tablist">
                 <a class="nav-item nav-link" id="portfolio-tab" data-toggle="tab" href="#" role="tab" aria-controls="portfolio" aria-selected="true">Portfolio</a>
                 <a class="nav-item nav-link" id="opportunity-tab" data-toggle="tab" href="#" role="tab" aria-controls="opportunity" aria-selected="false">Opportunities</a>
                 <a class="nav-item nav-link active" id="achievement-tab" data-toggle="tab" href="#" role="tab" aria-controls="achievement" aria-selected="false">Achievements</a>
                 <a class="nav-item nav-link" id="wallet-tab" data-toggle="tab" href="#" role="tab" aria-controls="wallet" aria-selected="false">Wallet</a>
             </nav>
+            <!-- Profile Tabs for Small devices -->
+            <select class="form-control form-control-sm d-md-none mx-auto my-3" id="m-profileTab">
+                <option value="0">Portfolio</option>
+                <option value="1">Opportunity</option>
+                <option value="2" selected>Achievement</option>
+                <option value="3">Wallet</option>
+            </select>
             <div class="row pb-3">
                 <!-- Describes Navigation history -->
                 <div class="col-12 page-navigation pb-2">
@@ -98,8 +105,8 @@
                     <span class="active"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;Bill board Advert</span>
                 </div>
                 <!-- User Bio -->
-                <div class="col-md-4 px-2">
-                    <div class="row plugger-bio no-gutters">
+                <div class="col-12 col-md-4 px-2 mt-4 mt-md-0 order-2 order-md-1">
+                    <div class="row plugger-bio no-gutters mx-auto">
                         <!-- Msg images appear when looking at a third parties profile -->
                         <div class="col-12">
                             <div class="media">
@@ -191,7 +198,7 @@
                         <hr>
                         <!-- The Edit button is visible only when account owner, is view own account -->
                         <div class="col-12 bio-edit text-center mb-3">
-                            <a href="#" class="btn btn-yellow plug-btn">Edit Profile</a>
+                            <a href="#" class="btn bg-yellow plug-btn">Edit Profile</a>
                         </div>
                         <div class="col-12 bio-member text-center">
                             MEMBER SINCE: NOVEMBER 17, 2017.
@@ -199,7 +206,7 @@
                     </div>
                 </div>
                 <!-- Opportunity Gallery -->
-                <div class="col-md-8 px-2 mt-4 mt-md-0">
+                <div class="col-12 col-md-8 px-2 order-1 order-md-2">
                     <div class="bio-opportunity">
                         <!-- Opportunity Profile -->
                         <div class="row p-1-25">
@@ -252,8 +259,9 @@
                                 </p>
                                 <!-- Reviews Collapse Button -->
                                 <p class="px-lg-3 pb-3 mt-5 mb-0 text-center">
-                                    <a class="btn btn-yellow plug-btn" data-toggle="collapse" href="#ach-review" aria-expanded="false" aria-controls="ach_review">Reviews&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                    <a class="btn bg-yellow plug-btn" data-toggle="collapse" href="#ach-review" aria-expanded="false" aria-controls="ach_review">Reviews&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
                                 </p>
+                                <!-- Reviews Collapse Body -->
                                 <div class="px-lg-3 collapse" id="ach-review">
                                     <hr>
                                     <div class="card card-body">
